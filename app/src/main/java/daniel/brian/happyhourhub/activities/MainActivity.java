@@ -1,8 +1,10 @@
-package daniel.brian.happyhourhub;
+package daniel.brian.happyhourhub.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import daniel.brian.happyhourhub.R;
 
 public class MainActivity extends AppCompatActivity {
 
