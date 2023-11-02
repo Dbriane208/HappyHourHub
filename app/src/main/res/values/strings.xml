@@ -6,4 +6,6 @@
     <string name="introduction">Happy Hour Hub is your go-to resource for discovering, crafting, and enjoying a wide range of delightful cocktails.</string>
     <string name="motto">Enjoying every moment with a sip creating memories</string>
     <string name="start">Start</string>
+    <string name="register">Register</string>
+    <string name="login">Login</string>
 </resources>
