@@ -8,4 +8,9 @@
     <string name="start">Start</string>
     <string name="register">Register</string>
     <string name="login">Login</string>
+    <string name="loginText">Let\'s Login.</string>
+    <string name="loginDescription">Don\'t have an account? Register.</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="forgotPassword">Forgot Password?</string>
 </resources>
