@@ -1,4 +1,4 @@
-package daniel.brian.happyhourhub.fragment;
+package daniel.brian.happyhourhub.fragments;
 
 import android.os.Bundle;
 
