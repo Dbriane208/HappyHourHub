@@ -8,15 +8,15 @@
     tools:context=".fragments.IntroductionFragment">
 
     <TextView
+        style="@style/h3"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:text="@string/welcome"
-        style="@style/h3"
+        android:textSize="20sp"
         android:textStyle="bold|italic"
-        android:textSize="23sp"
-        app:layout_constraintStart_toStartOf="@id/guidelineMrgStart"
+        app:layout_constraintBottom_toBottomOf="@id/guidelineMrgTop"
         app:layout_constraintEnd_toEndOf="@id/guidelineMrgEnd"
-         app:layout_constraintBottom_toBottomOf="@id/guidelineMrgTop"/>
+        app:layout_constraintStart_toStartOf="@id/guidelineMrgStart" />
 
     <ImageView
         android:layout_width="wrap_content"
@@ -35,60 +35,33 @@
         android:layout_height="0dp"
         android:contentDescription="@string/app_name"
         android:src="@drawable/ellipse"
-        app:layout_constraintBottom_toBottomOf="@id/guidelineMrgBottom"
-        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintBottom_toBottomOf="@id/guidelineMrgMiddle"
+        app:layout_constraintDimensionRatio="0:0"
         app:layout_constraintEnd_toEndOf="@id/guidelineMrgEnd"
         app:layout_constraintStart_toStartOf="@id/guidelineMrgStart"
-        app:layout_constraintTop_toTopOf="@id/guidelineMrgMiddle"
+        app:layout_constraintTop_toTopOf="@id/guidelineMrgTop"
         tools:ignore="ImageContrastCheck" />
 
     <TextView
         android:id="@+id/description"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/introduction"
-        android:gravity="center_horizontal"
         style="@style/h3"
-        android:textStyle="bold"
-        android:layout_marginTop="20dp"
-        app:layout_constraintStart_toStartOf="@id/ellipse"
-        app:layout_constraintEnd_toEndOf="@+id/ellipse"
-        app:layout_constraintTop_toTopOf="@id/ellipse"/>
-
-    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/motto"
-        android:gravity="center"
-        style="@style/h2"
-        android:textStyle="italic"
-        android:layout_marginTop="30dp"
-        app:layout_constraintStart_toStartOf="@id/guidelineMrgStart"
+        android:gravity="center_horizontal"
+        android:text="@string/introduction"
         app:layout_constraintEnd_toEndOf="@+id/guidelineMrgEnd"
-        app:layout_constraintTop_toBottomOf="@id/description"
-        />
+        app:layout_constraintStart_toStartOf="@id/guidelineMrgStart"
+        app:layout_constraintTop_toTopOf="@id/guidelineMrgMiddle" />
 
     <androidx.appcompat.widget.AppCompatButton
+        style="@style/blueButtonStyle"
         android:layout_width="@dimen/btnWidth"
         android:layout_height="@dimen/btnHt"
         android:text="@string/start"
-        style="@style/blueButtonStyle"
-        android:layout_marginBottom="20dp"
-        app:layout_constraintStart_toStartOf="@id/guidelineMrgStart"
+        app:layout_constraintTop_toBottomOf="@id/guidelineButtonTop"
+        app:layout_constraintBottom_toTopOf="@id/guidelineMrgBottom"
         app:layout_constraintEnd_toEndOf="@id/guidelineMrgEnd"
-        app:layout_constraintBottom_toBottomOf="@id/guidelineMrgBottom"/>
-
-    <ImageView
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:contentDescription="@string/app_name"
-        android:scaleType="centerCrop"
-        android:src="@drawable/texture_left"
-        app:layout_constraintBottom_toBottomOf="@id/guidelineMrgTop"
-        app:layout_constraintDimensionRatio="1:3"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="ImageContrastCheck" />
+        app:layout_constraintStart_toStartOf="@id/guidelineMrgStart" />
 
     <ImageView
         android:layout_width="0dp"
@@ -99,17 +72,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintDimensionRatio="1:3"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/guidelineMrgBottom"
-        tools:ignore="ImageContrastCheck" />
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:contentDescription="@string/app_name"
-        android:scaleType="centerCrop"
-        android:src="@drawable/texture_right"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/guidelineMrgStart"
+        app:layout_constraintTop_toTopOf="@id/guidelineMrgMiddle"
         tools:ignore="ImageContrastCheck" />
 
     <androidx.constraintlayout.widget.Guideline
@@ -138,12 +102,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.85" />
+        app:layout_constraintGuide_percent="0.92" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineMrgMiddle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.4" />
+        app:layout_constraintGuide_percent="0.48" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineButtonTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.79" />
 </androidx.constraintlayout.widget.ConstraintLayout>
