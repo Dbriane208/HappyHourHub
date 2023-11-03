@@ -13,4 +13,9 @@
     <string name="email">Email</string>
     <string name="password">Password</string>
     <string name="forgotPassword">Forgot Password?</string>
+    <string name="registerText">Let\'s Register</string>
+    <string name="forgotPasswordText">Already have an account? Login.</string>
+    <string name="fname">First name</string>
+    <string name="lname">Last name</string>
+    <string name="contact">Phone number</string>
 </resources>
