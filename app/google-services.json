@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "871643756039",
+    "project_id": "happyhourhub-e86e7",
+    "storage_bucket": "happyhourhub-e86e7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:871643756039:android:08642ee4ec6897b3d79ca2",
+        "android_client_info": {
+          "package_name": "daniel.brian.happyhourhub"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTPaRWUETz1HocmlZmZYZTtrMo42qIFb4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
