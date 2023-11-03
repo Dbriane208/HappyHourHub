@@ -1,4 +1,4 @@
-package daniel.brian.happyhourhub.fragments;
+package daniel.brian.happyhourhub.authfragments;
 
 import android.os.Bundle;
 
@@ -12,10 +12,10 @@ import daniel.brian.happyhourhub.R;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link IntroductionFragment#newInstance} factory method to
+ * Use the {@link AccountsOptionsFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class IntroductionFragment extends Fragment {
+public class AccountsOptionsFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -26,7 +26,7 @@ public class IntroductionFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public IntroductionFragment() {
+    public AccountsOptionsFragment() {
         // Required empty public constructor
     }
 
@@ -36,11 +36,11 @@ public class IntroductionFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment IntroudctionFragment.
+     * @return A new instance of fragment AccountsOptionsFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static IntroductionFragment newInstance(String param1, String param2) {
-        IntroductionFragment fragment = new IntroductionFragment();
+    public static AccountsOptionsFragment newInstance(String param1, String param2) {
+        AccountsOptionsFragment fragment = new AccountsOptionsFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -61,6 +61,6 @@ public class IntroductionFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_introudction, container, false);
+        return inflater.inflate(R.layout.fragment_accounts_options, container, false);
     }
 }

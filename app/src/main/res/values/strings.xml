@@ -2,4 +2,15 @@
     <string name="app_name">HappyHourHub</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="welcome">Welcome to Happy Hour Hub </string>
+    <string name="introduction">Happy Hour Hub is your go-to resource for discovering, crafting, and enjoying a wide range of delightful cocktails.</string>
+    <string name="motto">Enjoying every moment with a sip creating memories</string>
+    <string name="start">Start</string>
+    <string name="register">Register</string>
+    <string name="login">Login</string>
+    <string name="loginText">Let\'s Login.</string>
+    <string name="loginDescription">Don\'t have an account? Register.</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="forgotPassword">Forgot Password?</string>
 </resources>
