@@ -23,6 +23,8 @@
         android:layout_height="wrap_content"
         android:text="@string/registerText"
         style="@style/h4"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="5dp"
         app:layout_constraintStart_toStartOf="@id/guidelineMrgStart"
         app:layout_constraintEnd_toEndOf="@id/guidelineMrgEnd"
         app:layout_constraintTop_toTopOf="@+id/guidelineLogoBottom"
@@ -35,6 +37,7 @@
         android:text="@string/forgotPasswordText"
         style="@style/h2"
         android:textStyle="bold"
+        android:layout_marginBottom="15dp"
         app:layout_constraintStart_toStartOf="@id/guidelineMrgStart"
         app:layout_constraintEnd_toEndOf="@id/guidelineMrgEnd"
         app:layout_constraintTop_toTopOf="@+id/guidelineRegisterBottom"
@@ -48,6 +51,7 @@
         android:autofillHints="name"
         android:hint="@string/fname"
         android:inputType="textPersonName"
+        android:layout_marginBottom="25sp"
         app:layout_constraintBottom_toBottomOf="@id/guidelineFnBottom"
         app:layout_constraintEnd_toEndOf="@id/guidelineMrgEnd"
         app:layout_constraintStart_toStartOf="@id/guidelineMrgStart"
@@ -62,6 +66,7 @@
         android:autofillHints="name"
         android:hint="@string/lname"
         android:inputType="textPersonName"
+        android:layout_marginBottom="15sp"
         app:layout_constraintBottom_toBottomOf="@id/guidelineSnBottom"
         app:layout_constraintEnd_toEndOf="@id/guidelineMrgEnd"
         app:layout_constraintStart_toStartOf="@id/guidelineMrgStart"
@@ -76,6 +81,7 @@
         android:autofillHints="phone"
         android:inputType="phone"
         android:hint="@string/contact"
+        android:layout_marginBottom="15sp"
         app:layout_constraintBottom_toBottomOf="@id/guidelinePhoneBottom"
         app:layout_constraintEnd_toEndOf="@id/guidelineMrgEnd"
         app:layout_constraintStart_toStartOf="@id/guidelineMrgStart"
@@ -90,6 +96,7 @@
         android:autofillHints="emailAddress"
         android:inputType="textEmailAddress"
         android:hint="@string/email"
+        android:layout_marginBottom="15sp"
         app:layout_constraintBottom_toBottomOf="@id/guidelineEmailBottom"
         app:layout_constraintEnd_toEndOf="@id/guidelineMrgEnd"
         app:layout_constraintStart_toStartOf="@id/guidelineMrgStart"
@@ -164,7 +171,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.07" />
+        app:layout_constraintGuide_percent="0.02" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineLogoBottom"
@@ -178,7 +185,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.24" />
+        app:layout_constraintGuide_percent="0.22" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineForgotPassBottom"
@@ -192,40 +199,40 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.4" />
+        app:layout_constraintGuide_percent="0.38" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineSnBottom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.5" />
+        app:layout_constraintGuide_percent="0.48" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelinePhoneBottom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.61" />
+        app:layout_constraintGuide_percent="0.6" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineEmailBottom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.72" />
+        app:layout_constraintGuide_percent="0.69" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelinePassBottom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.82" />
+        app:layout_constraintGuide_percent="0.79" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineMrgBottom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.93" />
+        app:layout_constraintGuide_percent="0.92" />
 </androidx.constraintlayout.widget.ConstraintLayout>
