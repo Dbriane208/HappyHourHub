@@ -13,6 +13,8 @@
         android:layout_height="match_parent">
 
 
+
+
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline2"
             android:layout_width="wrap_content"
@@ -245,28 +247,6 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             app:layout_constraintGuide_begin="726dp" />
-
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintBottom_toTopOf="@+id/guideline2"
-            app:layout_constraintStart_toStartOf="@+id/guideline12"
-            android:layout_marginStart="20dp"
-            android:layout_marginBottom="25dp"
-            android:textSize="15sp"
-            android:text="Username" />
-
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginStart="100dp"
-            android:background="@drawable/profile_pc"
-            android:src="@drawable/cocktail1"
-            app:layout_constraintStart_toStartOf="@+id/guideline12"
-            tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteY="6dp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
