@@ -9,7 +9,6 @@
 
 
     <!-- CardView 1 -->
-
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView1"
         android:layout_width="match_parent"
