@@ -18,4 +18,10 @@
     <string name="fname">First name</string>
     <string name="lname">Last name</string>
     <string name="contact">Phone number</string>
+    <string name="userEmail">Enter your Email</string>
+    <string name="userPassword">New Password</string>
+    <string name="yourEmail">useremail</string>
+    <string name="update">Update</string>
+    <string name="userPhone">Enter PhoneNo</string>
+    <string name="yourPhone">Phone Number</string>
 </resources>

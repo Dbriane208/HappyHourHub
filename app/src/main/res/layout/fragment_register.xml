@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/blury_background"
-    tools:context=".authfragments.RegisterFragment">
+    tools:context=".fragments.login.RegisterFragment">
 
     <ImageView
         android:layout_width="wrap_content"
@@ -48,7 +48,7 @@
         style="@style/editText"
         android:layout_width="0dp"
         android:layout_height="55dp"
-        android:autofillHints="name"
+        android:autofillHints=""
         android:hint="@string/fname"
         android:inputType="textPersonName"
         android:layout_marginBottom="25sp"
@@ -63,7 +63,7 @@
         style="@style/editText"
         android:layout_width="0dp"
         android:layout_height="55dp"
-        android:autofillHints="name"
+        android:autofillHints=""
         android:hint="@string/lname"
         android:inputType="textPersonName"
         android:layout_marginBottom="15sp"
@@ -78,7 +78,7 @@
         style="@style/editText"
         android:layout_width="0dp"
         android:layout_height="55dp"
-        android:autofillHints="phone"
+        android:autofillHints=""
         android:inputType="phone"
         android:hint="@string/contact"
         android:layout_marginBottom="15sp"
@@ -93,7 +93,7 @@
         style="@style/editText"
         android:layout_width="0dp"
         android:layout_height="55dp"
-        android:autofillHints="emailAddress"
+        android:autofillHints=""
         android:inputType="textEmailAddress"
         android:hint="@string/email"
         android:layout_marginBottom="15sp"
