@@ -1,4 +1,4 @@
-package daniel.brian.happyhourhub.mainfragments;
+package daniel.brian.happyhourhub.fragments.bottom_navigation;
 
 import android.os.Bundle;
 
