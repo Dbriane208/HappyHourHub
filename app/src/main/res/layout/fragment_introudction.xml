@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/blury_background"
-    tools:context=".authfragments.IntroductionFragment">
+    tools:context=".fragments.login.IntroductionFragment">
 
     <TextView
         style="@style/h3"
@@ -54,6 +54,7 @@
         app:layout_constraintTop_toTopOf="@id/guidelineMrgMiddle" />
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/start"
         style="@style/blueButtonStyle"
         android:layout_width="@dimen/btnWidth"
         android:layout_height="@dimen/btnHt"
