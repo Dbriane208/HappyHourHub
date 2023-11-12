@@ -61,10 +61,12 @@
 
                     <Button
                         android:id="@+id/subtract_button"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
                         android:text="-"
-                        android:background="@drawable/button2"/>
+                        android:backgroundTint="@color/yellow"
+                        android:textSize="20sp"
+                        android:textColor="@color/white"/>
 
                     <TextView
                         android:id="@+id/item_quantity"
@@ -75,10 +77,12 @@
 
                     <Button
                         android:id="@+id/add_button"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
                         android:text="+"
-                        android:textColor="#FFFF00" /> <!-- Yellow text color -->
+                        android:backgroundTint="@color/yellow"
+                        android:textSize="20sp"
+                        android:textColor="@color/white"/> <!-- Yellow text color -->
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
@@ -139,10 +143,13 @@
 
                     <Button
                         android:id="@+id/subtract_button1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
                         android:text="-"
-                        android:textColor="#FFFF00" /> <!-- Yellow text color -->
+                        android:backgroundTint="@color/yellow"
+                        android:textSize="20sp"
+                        android:textColor="@color/white" />
+
 
                     <TextView
                         android:id="@+id/item_quantity1"
@@ -152,11 +159,12 @@
                         android:textSize="16sp" />
 
                     <Button
-                        android:id="@+id/add_button1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
                         android:text="+"
-                        android:textColor="#FFFF00" /> <!-- Yellow text color -->
+                        android:backgroundTint="@color/yellow"
+                        android:textSize="20sp"
+                        android:textColor="@color/white"/> <!-- Yellow text color -->
                 </LinearLayout>
 
             </LinearLayout>
@@ -219,10 +227,12 @@
 
                     <Button
                         android:id="@+id/subtract_button2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
                         android:text="-"
-                        android:textColor="#FFFF00" />
+                        android:backgroundTint="@color/yellow"
+                        android:textSize="20sp"
+                        android:textColor="@color/white"/>
 
                     <TextView
                         android:id="@+id/item_quantity2"
@@ -233,10 +243,12 @@
 
                     <Button
                         android:id="@+id/add_button2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
                         android:text="+"
-                        android:textColor="#FFFF00" />
+                        android:backgroundTint="@color/yellow"
+                        android:textSize="20sp"
+                        android:textColor="@color/white"/>
                 </LinearLayout>
 
             </LinearLayout>
@@ -336,6 +348,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="40dp"
         android:padding="14dp"
+        android:backgroundTint="@color/yellow"
         android:text="ORDER NOW!"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
