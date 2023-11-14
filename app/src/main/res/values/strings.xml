@@ -24,5 +24,7 @@
     <string name="update">Update</string>
     <string name="userPhone">Enter PhoneNo</string>
     <string name="yourPhone">Phone Number</string>
+    <string name="alcoholic">Alchoholic Cocktails</string>
+    <string name="nonalcoholic">Non Alcoholic Cocktails</string>
 </resources>
 
