@@ -3,8 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@color/white_smoke"
     android:layout_height="match_parent"
+    android:background="@color/white_smoke"
     tools:context=".fragments.bottom_navigation.HomeFragment">
 
 
@@ -105,7 +105,7 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/guideline10"
             app:layout_constraintTop_toTopOf="@+id/guideline2"
-            app:layout_constraintVertical_bias="0.394" >
+            app:layout_constraintVertical_bias="0.394">
 
         </EditText>
 
@@ -152,20 +152,20 @@
             android:layout_width="150dp"
             android:layout_height="160dp"
             app:layout_constraintBottom_toTopOf="@+id/guideline6"
-            app:layout_constraintStart_toStartOf="@+id/guideline10" >
+            app:layout_constraintStart_toStartOf="@+id/guideline10">
 
             <TextView
                 android:layout_width="wrap_content"
-                android:text="Strawberies"
-                android:textSize="18sp"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
-                android:layout_height="wrap_content"/>
+                android:text="Strawberies"
+                android:textSize="18sp" />
 
             <ImageView
                 android:layout_width="120dp"
                 android:layout_height="150dp"
-                android:layout_marginTop="40dp"
                 android:layout_marginStart="60dp"
+                android:layout_marginTop="40dp"
                 android:src="@drawable/cocktail7" />
         </androidx.cardview.widget.CardView>
 
@@ -173,20 +173,20 @@
             android:layout_width="150dp"
             android:layout_height="160dp"
             app:layout_constraintBottom_toTopOf="@+id/guideline6"
-            app:layout_constraintStart_toStartOf="@+id/guideline12" >
+            app:layout_constraintStart_toStartOf="@+id/guideline12">
 
             <TextView
                 android:layout_width="wrap_content"
-                android:text="Strawberies"
-                android:textSize="18sp"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
-                android:layout_height="wrap_content"/>
+                android:text="Strawberies"
+                android:textSize="18sp" />
 
             <ImageView
                 android:layout_width="120dp"
                 android:layout_height="150dp"
-                android:layout_marginTop="40dp"
                 android:layout_marginStart="60dp"
+                android:layout_marginTop="40dp"
                 android:src="@drawable/cocktail7" />
         </androidx.cardview.widget.CardView>
 
@@ -198,16 +198,16 @@
 
             <TextView
                 android:layout_width="wrap_content"
-                android:text="Strawberies"
-                android:textSize="18sp"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
-                android:layout_height="wrap_content"/>
+                android:text="Strawberies"
+                android:textSize="18sp" />
 
             <ImageView
                 android:layout_width="120dp"
                 android:layout_height="150dp"
-                android:layout_marginTop="40dp"
                 android:layout_marginStart="60dp"
+                android:layout_marginTop="40dp"
                 android:src="@drawable/cocktail7" />
         </androidx.cardview.widget.CardView>
 
@@ -219,24 +219,18 @@
 
             <TextView
                 android:layout_width="wrap_content"
-                android:text="Strawberies"
-                android:textSize="18sp"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
-                android:layout_height="wrap_content"/>
+                android:text="Strawberies"
+                android:textSize="18sp" />
 
             <ImageView
                 android:layout_width="120dp"
                 android:layout_height="150dp"
-                android:layout_marginTop="40dp"
                 android:layout_marginStart="60dp"
+                android:layout_marginTop="40dp"
                 android:src="@drawable/cocktail7" />
         </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            app:layout_constraintBottom_toTopOf="@+id/guideline13"
-            app:layout_constraintStart_toStartOf="@+id/guideline10" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline13"
@@ -249,10 +243,10 @@
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintBottom_toTopOf="@+id/guideline2"
-            app:layout_constraintStart_toStartOf="@+id/guideline12"
             android:layout_marginBottom="20dp"
-            android:text="Username"/>
+            android:text="Username"
+            app:layout_constraintBottom_toTopOf="@+id/guideline2"
+            app:layout_constraintStart_toStartOf="@+id/guideline12" />
 
         <ImageView
             android:id="@+id/imageView2"
@@ -262,7 +256,6 @@
             app:layout_constraintBottom_toTopOf="@+id/guideline2"
             app:layout_constraintStart_toStartOf="@+id/guideline12"
             app:srcCompat="@drawable/my_avatar" />
-
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
