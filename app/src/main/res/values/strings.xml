@@ -26,5 +26,8 @@
     <string name="yourPhone">Phone Number</string>
     <string name="alcoholic">Alchoholic Cocktails</string>
     <string name="nonalcoholic">Non Alcoholic Cocktails</string>
+    <string name="home">Home</string>
+    <string name="recipe">Recipe</string>
+    <string name="cart">Cart</string>
 </resources>
 

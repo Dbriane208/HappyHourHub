@@ -28,6 +28,9 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    buildFeatures{
+        viewBinding true
+    }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_17
         targetCompatibility JavaVersion.VERSION_17
@@ -70,7 +73,7 @@ dependencies {
     implementation 'com.shuhart.stepview:stepview:1.5.1'
 
     //Android Ktx
-    implementation 'androidx.navigation:navigation-fragment-ktx:2.7.4'
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.7.5'
 
     //retrofit and gson converter
     implementation "com.squareup.retrofit2:retrofit:2.9.0"
@@ -81,6 +84,4 @@ dependencies {
     // LiveData
     implementation "androidx.lifecycle:lifecycle-livedata:$lifecycle_version"
 
-    //Rxjava
-    implementation "io.reactivex.rxjava3:rxjava:3.1.8"
 }
