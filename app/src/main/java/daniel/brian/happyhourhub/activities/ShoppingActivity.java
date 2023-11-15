@@ -12,6 +12,7 @@ import daniel.brian.happyhourhub.R;
 import daniel.brian.happyhourhub.databinding.ActivityShoppingBinding;
 import daniel.brian.happyhourhub.fragments.bottom_navigation.HomeFragment;
 import daniel.brian.happyhourhub.fragments.bottom_navigation.RecipeFragment;
+import daniel.brian.happyhourhub.fragments.bottom_navigation.cartFragment;
 
 public class ShoppingActivity extends AppCompatActivity {
     ActivityShoppingBinding binding;
@@ -23,12 +24,15 @@ public class ShoppingActivity extends AppCompatActivity {
         binding = ActivityShoppingBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-       binding.bottomNavigation.setOnItemReselectedListener(item -> {
+       binding.bottomNavigation.setOnItemSelectedListener(item -> {
           if(item.getItemId() == R.id.homeFragment){
               replaceFragment(new HomeFragment());
           } else if (item.getItemId() == R.id.recipeFragment) {
               replaceFragment(new RecipeFragment());
+          } else if (item.getItemId() == R.id.cartFragment) {
+              replaceFragment(new cartFragment());
           }
+          return true;
        });
 
     }
