@@ -12,7 +12,7 @@ import daniel.brian.happyhourhub.R;
 import daniel.brian.happyhourhub.databinding.ActivityShoppingBinding;
 import daniel.brian.happyhourhub.fragments.bottom_navigation.HomeFragment;
 import daniel.brian.happyhourhub.fragments.bottom_navigation.RecipeFragment;
-import daniel.brian.happyhourhub.fragments.bottom_navigation.cartFragment;
+import daniel.brian.happyhourhub.fragments.bottom_navigation.CartFragment;
 
 public class ShoppingActivity extends AppCompatActivity {
     ActivityShoppingBinding binding;
@@ -30,7 +30,7 @@ public class ShoppingActivity extends AppCompatActivity {
           } else if (item.getItemId() == R.id.recipeFragment) {
               replaceFragment(new RecipeFragment());
           } else if (item.getItemId() == R.id.cartFragment) {
-              replaceFragment(new cartFragment());
+              replaceFragment(new CartFragment());
           }
           return true;
        });
