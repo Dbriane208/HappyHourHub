@@ -4,14 +4,14 @@ import android.annotation.SuppressLint;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
+import androidx.navigation.ui.NavigationUI;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import daniel.brian.happyhourhub.R;
 import daniel.brian.happyhourhub.databinding.ActivityShoppingBinding;
-import daniel.brian.happyhourhub.fragments.bottom_navigation.HomeFragment;
-import daniel.brian.happyhourhub.fragments.bottom_navigation.RecipeFragment;
 
 public class ShoppingActivity extends AppCompatActivity {
     ActivityShoppingBinding binding;
@@ -23,20 +23,8 @@ public class ShoppingActivity extends AppCompatActivity {
         binding = ActivityShoppingBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-       binding.bottomNavigation.setOnItemReselectedListener(item -> {
-          if(item.getItemId() == R.id.homeFragment){
-              replaceFragment(new HomeFragment());
-          } else if (item.getItemId() == R.id.recipeFragment) {
-              replaceFragment(new RecipeFragment());
-          }
-       });
-
-    }
-
-    private void replaceFragment(Fragment fragment){
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.shoppingHostFragment,fragment);
-        fragmentTransaction.commit();
+        BottomNavigationView navigationView = findViewById(R.id.bottomNavigation);
+        NavController navController = Navigation.findNavController(this,R.id.shoppingHostFragment);
+        NavigationUI.setupWithNavController(navigationView,navController);
     }
 }
