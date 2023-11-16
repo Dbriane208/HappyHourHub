@@ -16,7 +16,6 @@ import daniel.brian.happyhourhub.databinding.ActivityShoppingBinding;
 public class ShoppingActivity extends AppCompatActivity {
     ActivityShoppingBinding binding;
 
-    @SuppressLint("NonConstantResourceId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
