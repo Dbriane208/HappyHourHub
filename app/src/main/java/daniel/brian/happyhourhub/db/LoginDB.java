@@ -39,7 +39,8 @@ public class LoginDB extends SQLiteOpenHelper {
 
     public boolean checkUser(String phoneNumber, String email){
         SQLiteDatabase db = this.getWritableDatabase();
-        @SuppressLint("Recycle") Cursor cursor = db.rawQuery("select * from users where phoneNumber = ? and email = ?",new String[]{phoneNumber,email});
+        @SuppressLint("Recycle")
+        Cursor cursor = db.rawQuery("select * from users where phoneNumber = ? and email = ?",new String[]{phoneNumber,email});
         return cursor.getCount() > 0;
     }
 
