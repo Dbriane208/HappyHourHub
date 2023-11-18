@@ -1,5 +1,6 @@
 package daniel.brian.happyhourhub.db;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
@@ -30,8 +31,21 @@ public class AdminDB extends SQLiteOpenHelper {
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         // drop table if table exists
-        db.execSQL("DROP TABLE IF EXISTS"+TABLE_COCKTAIL);
+        db.execSQL("DROP TABLE IF EXISTS "+TABLE_COCKTAIL);
         // create tables again
         onCreate(db);
+    }
+
+    // code to add new product
+    public boolean insertCocktailData(String PRODUCT_NAME,String PRODUCT_PRICE, String PRODUCT_DESCRIPTION, String PRODUCT_TYPE){
+        SQLiteDatabase db=this.getWritableDatabase();
+
+        ContentValues values= new ContentValues();
+        values.put("Name",PRODUCT_NAME);
+        values.put("Price",PRODUCT_PRICE);
+        values.put("Description", PRODUCT_DESCRIPTION);
+        values.put("Type", PRODUCT_TYPE);
+        long result = db.insert("TABLE_COCKTAIL",null,values);
+        return result != -1;
     }
 }
