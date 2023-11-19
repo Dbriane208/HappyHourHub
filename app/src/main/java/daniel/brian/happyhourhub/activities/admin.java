@@ -17,7 +17,7 @@ public class admin extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.fragment_admin);
+        setContentView(R.layout.admin_layout);
 
         adminDB = new AdminDB(this); // Create an instance of AdminDB
 
