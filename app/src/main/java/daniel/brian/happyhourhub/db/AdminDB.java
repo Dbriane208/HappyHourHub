@@ -18,7 +18,7 @@ public class AdminDB extends SQLiteOpenHelper {
     private static final String PRODUCT_TYPE="Type";
     private static  final String PRODUCT_DESCRIPTION ="Product_description";
 
-    public AdminDB(@Nullable Context context) {
+    public AdminDB(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
 
