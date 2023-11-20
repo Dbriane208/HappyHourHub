@@ -29,5 +29,11 @@
     <string name="home">Home</string>
     <string name="recipe">Recipe</string>
     <string name="cart">Cart</string>
+    <string name="search">Search Cocktails</string>
+    <string name="username">Username</string>
+    <string name="available">Available Cocktails</string>
+    <string name="famous">Famous Cocktails</string>
+    <string name="noAlcohol">Non Alcoholic</string>
+    <string name="alcohol">Alcoholic</string>
 </resources>
 
