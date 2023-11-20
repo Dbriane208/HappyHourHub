@@ -10,14 +10,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import daniel.brian.happyhourhub.R;
 import daniel.brian.happyhourhub.db.AdminDB;
 
-public class admin extends AppCompatActivity {
+public class AdminActivity extends AppCompatActivity {
 
     private AdminDB adminDB;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.admin_layout);
+        setContentView(R.layout.activity_admin);
 
         adminDB = new AdminDB(this); // Create an instance of AdminDB
 
