@@ -17,6 +17,7 @@ import android.widget.TextView;
 import com.google.android.material.snackbar.Snackbar;
 
 import daniel.brian.happyhourhub.R;
+import daniel.brian.happyhourhub.activities.AdminActivity;
 import daniel.brian.happyhourhub.activities.ShoppingActivity;
 import daniel.brian.happyhourhub.db.LoginDB;
 
@@ -58,14 +59,21 @@ public class LoginFragment extends Fragment {
             if(email.isEmpty() || password.isEmpty()){
                 Snackbar.make(getView(),"Please Enter all Fields!",Snackbar.LENGTH_LONG).show();
             }else{
-                boolean checkUser = loginDB.checkUserEmailAndPassword(email,password);
-                if(checkUser == true){
-                    Snackbar.make(getView(),"Login Successful!",Snackbar.LENGTH_LONG).show();
-                     Intent intent = new Intent(getContext(), ShoppingActivity.class);
-                     startActivity(intent);
+                if(email.matches("admin@happyhourhub.com") && password.matches("admin@hhb")){
+                   Snackbar.make(getView(),"Logging as Admin successful!",Snackbar.LENGTH_LONG).show();
+                   Intent intent = new Intent(getContext(), AdminActivity.class);
+                   startActivity(intent);
                 }else{
-                    Snackbar.make(getView(),"Invalid Credentials",Snackbar.LENGTH_LONG).show();
+                    boolean checkUser = loginDB.checkUserEmailAndPassword(email,password);
+                    if(checkUser == true){
+                        Snackbar.make(getView(),"Login Successful!",Snackbar.LENGTH_LONG).show();
+                        Intent intent = new Intent(getContext(), ShoppingActivity.class);
+                        startActivity(intent);
+                    }else{
+                        Snackbar.make(getView(),"Invalid Credentials",Snackbar.LENGTH_LONG).show();
+                    }
                 }
+
             }
         });
         return view;

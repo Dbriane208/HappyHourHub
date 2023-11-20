@@ -25,6 +25,5 @@ public class ShoppingActivity extends AppCompatActivity {
         BottomNavigationView navigationView = findViewById(R.id.bottomNavigation);
         NavController navController = Navigation.findNavController(this,R.id.shoppingHostFragment);
         NavigationUI.setupWithNavController(navigationView,navController);
-        return null;
     }
 }
