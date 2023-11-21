@@ -442,5 +442,13 @@
         android:orientation="vertical"
         app:layout_constraintGuide_begin="-490dp" />
 
+    <!-- activity_main.xml -->
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?actionBarSize"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
