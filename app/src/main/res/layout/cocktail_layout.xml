@@ -23,7 +23,7 @@
                 android:layout_height="120dp"
                 android:contentDescription="@string/app_name"
                 android:scaleType="centerCrop"
-                android:src="@drawable/cocktail1"
+                android:src="@drawable/cocktailtwo"
                 android:padding="10dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"

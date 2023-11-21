@@ -1,17 +1,15 @@
 package daniel.brian.happyhourhub.fragments.bottom_navigation;
 
 import android.os.Bundle;
-
-import androidx.annotation.NonNull;
-import androidx.fragment.app.Fragment;
-
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.ViewFlipper;
+
+import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
 
 import daniel.brian.happyhourhub.R;
 import daniel.brian.happyhourhub.databinding.FragmentHomeBinding;
@@ -34,13 +32,18 @@ public class HomeFragment extends Fragment {
     private void setUpViewFlipper() {
         ViewFlipper viewFlipper = fragmentHomeBinding.famousCocktails;
         viewFlipper.setInAnimation(getContext(),R.anim.from_right);
-//        viewFlipper.setOutAnimation(getContext(),R.anim.from_left);
 
         int[] imageList = {
-                R.drawable.cocktail1,
-                R.drawable.cocktail2,
-                R.drawable.cocktail4,
-                R.drawable.cocktail7
+                R.drawable.cocktailone,
+                R.drawable.cocktailtwo,
+                R.drawable.cocktailthree,
+                R.drawable.cocktailfour,
+                R.drawable.cocktailfive,
+                R.drawable.cocktailsix,
+                R.drawable.cocktailseven,
+                R.drawable.cocktaileight,
+                R.drawable.cocktailnine,
+                R.drawable.cocktailten
         };
 
         for(int image : imageList){
