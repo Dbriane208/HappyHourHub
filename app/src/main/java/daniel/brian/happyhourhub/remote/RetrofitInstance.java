@@ -11,7 +11,8 @@ public class RetrofitInstance {
             .build()
             .create(DrinkApi.class);
 
-    public DrinkApi getDrinkApi(){
+    public static DrinkApi drinkApiInstance() {
         return drinkApiInstance;
     }
+
 }
