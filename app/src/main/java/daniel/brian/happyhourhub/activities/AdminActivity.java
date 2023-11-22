@@ -19,6 +19,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.Arrays;
 
 import daniel.brian.happyhourhub.R;
 import daniel.brian.happyhourhub.db.AdminDB;
@@ -85,7 +86,7 @@ public class AdminActivity extends AppCompatActivity {
             } else {
                 // Insert product data into the database
                 try {
-                    double priceValue = Double.parseDouble(productPrice);
+                    String priceValue = String.valueOf(Double.parseDouble(productPrice));
 
                     // Check if an image is selected
                     if (selectedBitmap != null) {

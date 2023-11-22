@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white_smoke"
-    tools:context=".fragments.bottom_navigation.HomeFragment">
+    tools:context=".fragments.main.HomeFragment">
 
     <EditText
         android:id="@+id/textView4"
@@ -90,46 +90,14 @@
 
     </androidx.cardview.widget.CardView>
 
-    <TextView
-        style="@style/h3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/noAlcohol"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@id/guidelineTopNonalcoholic"
-        app:layout_constraintEnd_toEndOf="@id/guidelineMrgEnd"
-        app:layout_constraintStart_toStartOf="@id/guidelineMrgStart"
-        app:layout_constraintTop_toTopOf="@id/guidelineBottomAlcoholic"
-        tools:ignore="VisualLintOverlap" />
-
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/availableNonAlcoholic"
+        android:id="@+id/availableCocktails"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/guidelineTopNonalcoholic"
+        app:layout_constraintTop_toBottomOf="@+id/guidelineBottomName"
         app:layout_constraintStart_toStartOf="@id/guidelineMrgStart"
         app:layout_constraintEnd_toEndOf="@id/guidelineMrgEnd"
-        app:layout_constraintBottom_toBottomOf="parent"/>
-
-    <TextView
-        style="@style/h3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/alcohol"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@id/guidelineBottomAlcName"
-        app:layout_constraintEnd_toEndOf="@id/guidelineMrgEnd"
-        app:layout_constraintStart_toStartOf="@id/guidelineMrgStart"
-        app:layout_constraintTop_toTopOf="@id/guidelineBottomName" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/availableAlcoholic"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/guidelineBottomAlcName"
-        app:layout_constraintStart_toStartOf="@id/guidelineMrgStart"
-        app:layout_constraintEnd_toEndOf="@id/guidelineMrgEnd"
-        app:layout_constraintBottom_toTopOf="@+id/guidelineBottomAlcoholic"/>
+       />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineBottomUser"
@@ -179,26 +147,5 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.22" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guidelineBottomAlcoholic"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.69" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guidelineTopNonalcoholic"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.74" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guidelineBottomAlcName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.48" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
