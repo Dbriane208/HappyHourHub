@@ -84,5 +84,6 @@
     <string name="descriptionTag">Gin flavour</string>
     <string name="type">Type :</string>
     <string name="typeTag">Alcoholic</string>
+    <string name="welcome1">Welcome</string>
 </resources>
 
