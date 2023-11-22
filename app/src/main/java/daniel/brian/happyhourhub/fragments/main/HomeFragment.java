@@ -96,6 +96,12 @@ public class HomeFragment extends Fragment {
         if (cursor.getCount() == 0) {
             Toast.makeText(requireActivity(), "No Entry Exists", Toast.LENGTH_LONG).show();
         } else {
+            productName.clear();
+            productPrice.clear();
+            productDescription.clear();
+            productType.clear();
+            Add_image_button.clear();
+
             while (cursor.moveToNext()) {
                 productName.add(cursor.getString(0));
                 productPrice.add(cursor.getString(1));
@@ -103,6 +109,10 @@ public class HomeFragment extends Fragment {
                 productType.add(cursor.getString(3));
                 Add_image_button.add(cursor.getBlob(4));
             }
+
+            // Move the adapter update here to make sure it gets updated with the new data
+            homeScreenAdapter.notifyDataSetChanged();
         }
     }
+
 }
