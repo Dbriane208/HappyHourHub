@@ -7,23 +7,27 @@
     android:background="@color/white_smoke"
     tools:context=".fragments.main.HomeFragment">
 
-    <EditText
-        android:id="@+id/textView4"
-        android:layout_width="300dp"
+    <TextView
+        android:id="@+id/welcome"
+        style="@style/h4"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:autofillHints=""
-        android:background="@drawable/search_bar"
-        android:hint="@string/search"
-        android:inputType="text"
-        android:minHeight="48dp"
-        android:padding="10dp"
-        android:textColorHint="#757575"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@id/guidelineBottomSearch"
-        app:layout_constraintEnd_toStartOf="@+id/guidelineMrgEnd"
-        app:layout_constraintStart_toStartOf="@+id/guidelineMrgStart"
-        app:layout_constraintTop_toTopOf="@+id/guidelineBottomUser" />
+        android:text="@string/welcome1"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/guidelineBottomUser"
+        app:layout_constraintBottom_toBottomOf="@id/guidelineBottomWelcome"
+        app:layout_constraintStart_toStartOf="@id/guidelineMrgStart" />
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/happy_hour_hub"
+        app:layout_constraintTop_toBottomOf="@id/guidelineBottomUser"
+        app:layout_constraintBottom_toTopOf="@id/guidelineBottomWelcome"
+        app:layout_constraintStart_toEndOf="@+id/welcome"
+        app:layout_constraintEnd_toEndOf="@id/guidelineMrgEnd"
+        tools:ignore="ImageContrastCheck" />
 
     <TextView
         android:id="@+id/username"
@@ -67,26 +71,25 @@
         android:text="@string/famous"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@id/guidelineBottomFamous"
-        app:layout_constraintStart_toStartOf="@id/guidelineMrgStart"
-        app:layout_constraintTop_toTopOf="@id/guidelineBottomSearch" />
+        app:layout_constraintStart_toStartOf="@id/guidelineMrgStart" />
 
     <androidx.cardview.widget.CardView
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:cardCornerRadius="15dp"
         android:layout_marginBottom="10dp"
+        app:cardCornerRadius="15dp"
         app:layout_constraintBottom_toTopOf="@+id/guidelineBottomSlider"
-        app:layout_constraintStart_toStartOf="@id/guidelineMrgStart"
         app:layout_constraintEnd_toEndOf="@id/guidelineMrgEnd"
+        app:layout_constraintStart_toStartOf="@id/guidelineMrgStart"
         app:layout_constraintTop_toBottomOf="@+id/guidelineBottomFamous">
 
         <ViewFlipper
             android:id="@+id/famousCocktails"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/cocktail_bg"
             android:autoStart="true"
-            android:flipInterval="2000"/>
+            android:background="@drawable/cocktail_bg"
+            android:flipInterval="2000" />
 
     </androidx.cardview.widget.CardView>
 
@@ -94,31 +97,24 @@
         android:id="@+id/availableCocktails"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/guidelineBottomName"
-        app:layout_constraintStart_toStartOf="@id/guidelineMrgStart"
+        android:layout_marginStart="35dp"
         app:layout_constraintEnd_toEndOf="@id/guidelineMrgEnd"
-       />
+        app:layout_constraintStart_toStartOf="@id/guidelineMrgStart"
+        app:layout_constraintTop_toBottomOf="@+id/guidelineBottomName" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineBottomUser"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.08481532" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guidelineBottomSearch"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.17" />
+        app:layout_constraintGuide_percent="0.09" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineBottomSlider"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.38" />
+        app:layout_constraintGuide_percent="0.47" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineMrgStart"
@@ -139,7 +135,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.43" />
+        app:layout_constraintGuide_percent="0.52" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineBottomFamous"
@@ -147,5 +143,12 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.22" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineBottomWelcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.17" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

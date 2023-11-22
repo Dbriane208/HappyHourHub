@@ -15,11 +15,6 @@
         android:theme="@style/Theme.HappyHourHub"
         tools:targetApi="31">
         <activity
-            android:name=".activities.Payment"
-            android:exported="false"
-            android:label="@string/title_activity_payment"
-            android:theme="@style/Theme.HappyHourHub" />
-        <activity
             android:name=".activities.ShoppingActivity"
             android:exported="false" />
         <activity android:name=".activities.AdminActivity"
