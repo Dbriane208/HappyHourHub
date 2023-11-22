@@ -141,5 +141,10 @@
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.93" />
 
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
