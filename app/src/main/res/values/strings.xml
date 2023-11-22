@@ -35,5 +35,12 @@
     <string name="famous">Famous Cocktails</string>
     <string name="noAlcohol">Non Alcoholic</string>
     <string name="alcohol">Alcoholic</string>
+    <string name="name">Name :</string>
+    <string name="price">Price :</string>
+    <string name="priceTag">1000</string>
+    <string name="description">Description :</string>
+    <string name="descriptionTag">Gin flavour</string>
+    <string name="type">Type :</string>
+    <string name="typeTag">Alcoholic</string>
 </resources>
 
