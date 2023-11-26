@@ -13,6 +13,7 @@ import android.widget.ViewFlipper;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -53,7 +54,7 @@ public class HomeFragment extends Fragment {
         recyclerView = fragmentHomeBinding.availableCocktails;
         homeScreenAdapter = new HomeScreenAdapter(this.getContext(), productName, productPrice, productDescription, productType, Add_image_button);
         recyclerView.setAdapter(homeScreenAdapter);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this.getContext()));
+        recyclerView.setLayoutManager(new GridLayoutManager(this.getContext(),2,LinearLayoutManager.VERTICAL,false));
         displayData();
 
         return fragmentHomeBinding.getRoot();

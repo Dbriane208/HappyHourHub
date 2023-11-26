@@ -10,4 +10,14 @@
         android:name="daniel.brian.happyhourhub.fragments.main.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/recipeFragment"
+        android:name="daniel.brian.happyhourhub.fragments.main.RecipeFragment"
+        android:label="fragment_recipe"
+        tools:layout="@layout/fragment_recipe" />
+    <fragment
+        android:id="@+id/cartFragment"
+        android:name="daniel.brian.happyhourhub.fragments.main.CartFragment"
+        android:label="fragment_cart"
+        tools:layout="@layout/fragment_cart" />
 </navigation>
