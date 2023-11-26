@@ -40,7 +40,6 @@ public class AdminDB extends SQLiteOpenHelper {
         values.put("image", image); // Assuming COLUMN_IMAGE is a BLOB column
         long result = db.insert("Products", null, values);
 
-
         return result != -1;
     }
 
