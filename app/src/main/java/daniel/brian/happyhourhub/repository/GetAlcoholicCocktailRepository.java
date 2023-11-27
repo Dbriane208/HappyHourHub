@@ -2,6 +2,7 @@ package daniel.brian.happyhourhub.repository;
 
 import android.util.Log;
 
+import androidx.annotation.NonNull;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 
@@ -18,18 +19,18 @@ import retrofit2.Response;
 public class GetAlcoholicCocktailRepository {
     public LiveData<Result<List<Alcoholic>>> getAlcoholicCocktails(){
         MutableLiveData<Result<List<Alcoholic>>> alcoholicCocktailLiveData = new MutableLiveData<>();
-        RetrofitInstance.drinkApiInstance().getAlcoholicDrink("alcoholic").enqueue(new Callback<AlcoholicList>() {
+        RetrofitInstance.drinkApiInstance().getAlcoholicDrink("alcoholic").enqueue(new Callback<>() {
             @Override
-            public void onResponse(Call<AlcoholicList> call, Response<AlcoholicList> response) {
+            public void onResponse(@NonNull Call<AlcoholicList> call, @NonNull Response<AlcoholicList> response) {
                 List<Alcoholic> alcoholics = response.body() != null ? response.body().getDrinks() : null;
-                if(alcoholics != null){
+                if (alcoholics != null) {
                     alcoholicCocktailLiveData.postValue(new Result.Success<>(alcoholics));
                 }
             }
 
             @Override
-            public void onFailure(Call<AlcoholicList> call, Throwable t) {
-                Log.d("GetAlcoholicRepository",t.getMessage());
+            public void onFailure(@NonNull Call<AlcoholicList> call, @NonNull Throwable t) {
+                Log.d("GetAlcoholicRepository", t.getMessage());
             }
         });
 

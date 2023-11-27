@@ -30,31 +30,6 @@
         tools:ignore="ImageContrastCheck" />
 
     <TextView
-        android:id="@+id/username"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:fontFamily="@font/poppins_light"
-        android:paddingEnd="20dp"
-        android:text="@string/username"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/guidelineBottomUser"
-        app:layout_constraintEnd_toStartOf="@id/userprofile"
-        tools:ignore="RtlSymmetry" />
-
-    <ImageView
-        android:id="@+id/userprofile"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="80dp"
-        android:contentDescription="@string/app_name"
-        android:scaleType="fitXY"
-        android:src="@drawable/user"
-        app:layout_constraintBottom_toTopOf="@+id/guidelineBottomUser"
-        app:layout_constraintEnd_toEndOf="@id/guidelineMrgEnd" />
-
-    <TextView
         style="@style/h3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -98,7 +73,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="35dp"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintEnd_toEndOf="@id/guidelineMrgEnd"
         app:layout_constraintStart_toStartOf="@id/guidelineMrgStart"
         app:layout_constraintTop_toBottomOf="@+id/guidelineBottomName" />
@@ -108,14 +82,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.09" />
+        app:layout_constraintGuide_percent="0.05" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineBottomSlider"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.47" />
+        app:layout_constraintGuide_percent="0.39" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineMrgStart"
@@ -136,20 +110,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.52" />
+        app:layout_constraintGuide_percent="0.44" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineBottomFamous"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.22" />
+        app:layout_constraintGuide_percent="0.18" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineBottomWelcome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.17" />
+        app:layout_constraintGuide_percent="0.13" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
