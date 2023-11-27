@@ -54,7 +54,7 @@ public class HomeFragment extends Fragment {
         recyclerView = fragmentHomeBinding.availableCocktails;
         homeScreenAdapter = new HomeScreenAdapter(this.getContext(), productName, productPrice, productDescription, productType, Add_image_button);
         recyclerView.setAdapter(homeScreenAdapter);
-        recyclerView.setLayoutManager(new GridLayoutManager(this.getContext(),2,LinearLayoutManager.VERTICAL,false));
+        recyclerView.setLayoutManager(new GridLayoutManager(this.getContext(),3,LinearLayoutManager.HORIZONTAL,false));
         displayData();
 
         return fragmentHomeBinding.getRoot();
