@@ -9,10 +9,10 @@ import daniel.brian.happyhourhub.dtos.Alcoholic;
 import daniel.brian.happyhourhub.repository.GetAlcoholicCocktailRepository;
 import daniel.brian.happyhourhub.util.Result;
 
-public class CocktailViewModel extends ViewModel {
+public class AlcoholicCocktailViewModel extends ViewModel {
     private final GetAlcoholicCocktailRepository getAlcoholicCocktailRepository;
 
-    public CocktailViewModel(GetAlcoholicCocktailRepository getAlcoholicCocktailRepository) {
+    public AlcoholicCocktailViewModel(GetAlcoholicCocktailRepository getAlcoholicCocktailRepository) {
         this.getAlcoholicCocktailRepository = getAlcoholicCocktailRepository;
     }
 

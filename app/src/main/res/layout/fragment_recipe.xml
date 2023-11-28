@@ -17,6 +17,16 @@
         app:layout_constraintStart_toStartOf="@id/guidelineMrgStart"
         app:layout_constraintTop_toTopOf="@id/guidelineTop" />
 
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="@id/guidelineMrgStart"
+        app:layout_constraintBottom_toBottomOf="@id/guidelineMiddle"
+        app:layout_constraintTop_toTopOf="@id/guidelineTop"
+        app:layout_constraintEnd_toEndOf="@id/guidelineMrgEnd"/>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/alcoholicCocktails"
         android:layout_width="0dp"

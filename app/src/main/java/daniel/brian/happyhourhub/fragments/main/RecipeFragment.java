@@ -21,13 +21,13 @@ import daniel.brian.happyhourhub.databinding.FragmentRecipeBinding;
 import daniel.brian.happyhourhub.dtos.Alcoholic;
 import daniel.brian.happyhourhub.repository.GetAlcoholicCocktailRepository;
 import daniel.brian.happyhourhub.util.Result;
-import daniel.brian.happyhourhub.viewmodel.CocktailViewModel;
-import daniel.brian.happyhourhub.viewmodel.CocktailViewModelFactory;
+import daniel.brian.happyhourhub.viewmodel.AlcoholicCocktailViewModel;
+import daniel.brian.happyhourhub.viewmodel.AlcoholicCocktailViewModelFactory;
 
 public class RecipeFragment extends Fragment {
     FragmentRecipeBinding binding;
     AlcoholicCocktailAdapter alcoholicCocktailAdapter;
-    CocktailViewModel cocktailViewModel;
+    AlcoholicCocktailViewModel alcoholicCocktailViewModel;
     GetAlcoholicCocktailRepository getAlcoholicCocktailRepository;
 
     @Override
@@ -42,18 +42,21 @@ public class RecipeFragment extends Fragment {
         recyclerView.setAdapter(alcoholicCocktailAdapter);
 
         getAlcoholicCocktailRepository = new GetAlcoholicCocktailRepository();
-        CocktailViewModelFactory cocktailViewModelFactory = new CocktailViewModelFactory(getAlcoholicCocktailRepository);
-        cocktailViewModel = new ViewModelProvider(this,cocktailViewModelFactory).get(CocktailViewModel.class);
+        AlcoholicCocktailViewModelFactory alcoholicCocktailViewModelFactory = new AlcoholicCocktailViewModelFactory(getAlcoholicCocktailRepository);
+        alcoholicCocktailViewModel = new ViewModelProvider(this, alcoholicCocktailViewModelFactory).get(AlcoholicCocktailViewModel.class);
         getAllAlcoholic();
 
         return binding.getRoot();
     }
 
     private void getAllAlcoholic() {
-        cocktailViewModel.getAlcoholicCocktails().observe(getViewLifecycleOwner(),listResult -> {
-            if(listResult instanceof Result.Success<List<Alcoholic>>){
+        alcoholicCocktailViewModel.getAlcoholicCocktails().observe(getViewLifecycleOwner(), listResult -> {
+            if(listResult instanceof Result.Loading<List<Alcoholic>>){
+                binding.progressBar.setVisibility(View.VISIBLE);
+            }else if(listResult instanceof Result.Success<List<Alcoholic>>){
+                binding.progressBar.setVisibility(View.INVISIBLE);
                 List<Alcoholic> alcoholicList = ((Result.Success<List<Alcoholic>>)listResult).getData();
-                alcoholicCocktailAdapter.setAlcoholicDrink((ArrayList<Alcoholic>) alcoholicList);
+                alcoholicCocktailAdapter.setAlcoholicCocktail((ArrayList<Alcoholic>) alcoholicList);
             } else if (listResult instanceof Result.Error<List<Alcoholic>>) {
                 Log.d("Recipe Fragment","Error");
             }
