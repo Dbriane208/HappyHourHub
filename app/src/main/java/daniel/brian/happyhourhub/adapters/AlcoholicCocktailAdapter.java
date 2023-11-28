@@ -18,7 +18,7 @@ public class AlcoholicCocktailAdapter extends RecyclerView.Adapter<AlcoholicCock
     private ArrayList<Alcoholic> alcoholicList = new ArrayList<>();
 
     @SuppressLint("NotifyDataSetChanged")
-    public void setAlcoholicDrink(ArrayList<Alcoholic> alcoholicList){
+    public void setAlcoholicCocktail(ArrayList<Alcoholic> alcoholicList){
         this.alcoholicList = alcoholicList;
         notifyDataSetChanged();
     }
