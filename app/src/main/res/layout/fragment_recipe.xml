@@ -47,6 +47,16 @@
         app:layout_constraintStart_toStartOf="@id/guidelineMrgStart"
         app:layout_constraintTop_toTopOf="@id/guidelineMiddle" />
 
+    <ProgressBar
+        android:id="@+id/progressBar1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="@id/guidelineMrgStart"
+        app:layout_constraintBottom_toBottomOf="@id/guidelineMrgBottom"
+        app:layout_constraintTop_toTopOf="@id/guidelineMiddle"
+        app:layout_constraintEnd_toEndOf="@id/guidelineMrgEnd"/>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/nonalcoholicCocktails"
         android:layout_width="0dp"
@@ -61,7 +71,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.05" />
+        app:layout_constraintGuide_percent="0.04" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineBottom"
@@ -75,7 +85,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.52" />
+        app:layout_constraintGuide_percent="0.49" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineEnd"
