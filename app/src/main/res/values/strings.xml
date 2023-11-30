@@ -85,5 +85,14 @@
     <string name="type">Type :</string>
     <string name="typeTag">Alcoholic</string>
     <string name="welcome1">Welcome</string>
+    <string name="Cart">MY CART</string>
+    <string name="order">ORDER NOW!</string>
+    <string name="item">3</string>
+    <string name="text">items in the cart</string>
+    <string name="total">Total</string>
+    <string name="amount">Ksh 1000</string>
+    <string name="cocktail">Cocktail</string>
+    <string name="cocktailPrice">Ksh 500</string>
+    <string name="itemCount">1</string>
 </resources>
 
