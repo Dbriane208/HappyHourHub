@@ -85,12 +85,12 @@
 
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/cocktailName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="36dp"
         android:layout_marginBottom="20dp"
-        android:text="Welcome to the Admin Dash Board"
+        android:text="@string/welcome_to_the_admin_dash_board"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/guideline17"
@@ -104,7 +104,7 @@
         android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline19"
         app:layout_constraintStart_toStartOf="@+id/guideline"
-        android:text="Name" />
+        android:text="@string/name1" />
 
     <TextView
         android:id="@+id/textView5"
@@ -114,7 +114,7 @@
         android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline20"
         app:layout_constraintStart_toStartOf="@+id/guideline"
-        android:text="Price" />
+        android:text="@string/price1" />
 
     <TextView
         android:id="@+id/textView6"
@@ -124,7 +124,7 @@
         android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline21"
         app:layout_constraintStart_toStartOf="@+id/guideline"
-        android:text="Description" />
+        android:text="@string/description1" />
 
     <TextView
         android:id="@+id/textView7"
@@ -134,7 +134,7 @@
         android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline22"
         app:layout_constraintStart_toStartOf="@+id/guideline"
-        android:text="Type" />
+        android:text="@string/type1" />
 
     <TextView
         android:id="@+id/textView8"
@@ -142,7 +142,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
         android:layout_marginBottom="24dp"
-        android:text="Image"
+        android:text="@string/image1"
         android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline23"
         app:layout_constraintStart_toStartOf="@+id/guideline" />
@@ -152,11 +152,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
+        android:autofillHints=""
         android:background="@drawable/edit_bg"
         android:ems="10"
-        android:hint="product name"
+        android:hint="@string/product_name"
         android:inputType="text"
         android:padding="10dp"
+        android:textColorHint="#546E7A"
         app:layout_constraintBottom_toTopOf="@+id/guideline19"
         app:layout_constraintEnd_toStartOf="@+id/guideline14"
         app:layout_constraintHorizontal_bias="0.428"
@@ -168,12 +170,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
+        android:autofillHints=""
         android:background="@drawable/edit_bg"
         android:ems="10"
-        android:hint="product price"
+        android:hint="@string/product_price"
         android:inputType="number"
         android:minHeight="48dp"
         android:padding="10dp"
+        android:textColorHint="#546E7A"
         app:layout_constraintBottom_toTopOf="@+id/guideline20"
         app:layout_constraintEnd_toStartOf="@+id/guideline14"
         app:layout_constraintHorizontal_bias="0.476"
@@ -184,12 +188,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
+        android:autofillHints=""
         android:background="@drawable/edit_bg"
         android:ems="10"
-        android:hint="product description"
+        android:hint="@string/product_description"
         android:inputType="text"
         android:minHeight="48dp"
         android:padding="10dp"
+        android:textColorHint="#546E7A"
         app:layout_constraintBottom_toTopOf="@+id/guideline21"
         app:layout_constraintEnd_toStartOf="@+id/guideline14"
         app:layout_constraintHorizontal_bias="0.428"
@@ -200,12 +206,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
+        android:autofillHints=""
         android:background="@drawable/edit_bg"
         android:ems="10"
-        android:hint="Alcoholic or non-Alcoholic"
+        android:hint="@string/alcoholic_or_non_alcoholic"
         android:inputType="text"
         android:minHeight="48dp"
         android:padding="10dp"
+        android:textColorHint="#546E7A"
         app:layout_constraintBottom_toTopOf="@+id/guideline22"
         app:layout_constraintEnd_toStartOf="@+id/guideline14"
         app:layout_constraintHorizontal_bias="0.428"
@@ -219,7 +227,7 @@
         android:backgroundTint="@color/g_orange_yellow"
         android:padding="10dp"
         android:textColor="@color/black"
-        android:text="Upload Image"
+        android:text="@string/upload_image"
         app:layout_constraintBottom_toTopOf="@+id/guideline23"
         app:layout_constraintEnd_toStartOf="@+id/guideline14"
         app:layout_constraintHorizontal_bias="0.415"
@@ -236,5 +244,5 @@
         app:layout_constraintBottom_toTopOf="@+id/guideline24"
         app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintEnd_toStartOf="@+id/guideline14"
-        android:text="Post" />
+        android:text="@string/post" />
 </androidx.constraintlayout.widget.ConstraintLayout>

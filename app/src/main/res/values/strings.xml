@@ -94,5 +94,22 @@
     <string name="cocktail">Cocktail</string>
     <string name="cocktailPrice">Ksh 500</string>
     <string name="itemCount">1</string>
+    <string name="ksh">Ksh</string>
+    <string name="money">500</string>
+    <string name="descriptionCocktail">An apple cocktail is any cocktail that contains apple juice, cider, or brandy. Apple cocktails are popular in the fall, when apples are in season, but they can be enjoyed year-round.</string>
+    <string name="cocktailName">Apple Cocktail</string>
+    <string name="add_to_cart">Add To Cart</string>
+    <string name="welcome_to_the_admin_dash_board">Welcome to the Admin Dash Board</string>
+    <string name="name1">Name</string>
+    <string name="price1">Price</string>
+    <string name="description1">Description</string>
+    <string name="type1">Type</string>
+    <string name="image1">Image</string>
+    <string name="product_name">product name</string>
+    <string name="product_price">product price</string>
+    <string name="product_description">product description</string>
+    <string name="alcoholic_or_non_alcoholic">Alcoholic or non-Alcoholic</string>
+    <string name="upload_image">Upload Image</string>
+    <string name="post">Post</string>
 </resources>
 
