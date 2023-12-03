@@ -14,9 +14,9 @@ import java.util.ArrayList;
 
 import daniel.brian.happyhourhub.R;
 import daniel.brian.happyhourhub.activities.DescriptionActivity;
-import daniel.brian.happyhourhub.activities.PaymentActivity;
 import daniel.brian.happyhourhub.databinding.CocktailHomeBinding;
 
+@SuppressWarnings("ALL")
 public class HomeScreenAdapter extends RecyclerView.Adapter<HomeScreenAdapter.HomeScreenViewHolder> {
     private ArrayList productName,productPrice,productDescription,productType,add_image_button;
     private Context context;
@@ -56,13 +56,15 @@ public class HomeScreenAdapter extends RecyclerView.Adapter<HomeScreenAdapter.Ho
         holder.cocktailHomeBinding.cocktailType.setText(String.valueOf(productType.get(position)));
         holder.cocktailHomeBinding.cocktailDescription.setText(String.valueOf(productDescription.get(position)));
 
-
         // Set click listener to open DescriptionFragment
         holder.itemView.setOnClickListener(view -> {
             int adapterPosition = holder.getAdapterPosition();
             if(adapterPosition != RecyclerView.NO_POSITION){
+                byte[] productImage = (byte[]) add_image_button.get(adapterPosition);
+
                 Intent intent = new Intent(view.getContext(), DescriptionActivity.class);
                 intent.putExtra("position",adapterPosition);
+                intent.putExtra("productImage",productImage);
                 intent.putStringArrayListExtra("productName",productName);
                 intent.putStringArrayListExtra("productPrice",productPrice);
                 intent.putStringArrayListExtra("productType",productType);

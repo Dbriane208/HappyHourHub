@@ -101,8 +101,8 @@
 
                 <TextView
                     android:id="@+id/cocktailDescription"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="50dp"
+                    android:layout_height="20dp"
                     android:text="@string/descriptionTag"
                     android:textStyle="bold"
                     android:layout_marginStart="10dp"

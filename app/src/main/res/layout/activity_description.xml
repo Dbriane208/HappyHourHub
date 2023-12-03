@@ -29,47 +29,58 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
-        <TextView
-            android:id="@+id/textViewPrice"
+        <LinearLayout
+            android:id="@+id/cocktailLinear"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            android:text="@string/ksh"
-            android:textColor="@color/yellow"
-            android:textSize="25sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toStartOf="@id/cocktailPrice"
-            app:layout_constraintStart_toEndOf="@id/cocktailName"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/cocktailPrice"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            android:paddingStart="10dp"
-            android:text="@string/money"
-            android:textColor="@color/yellow"
-            android:textSize="25sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toEndOf="@id/textViewPrice"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="RtlSymmetry,TextContrastCheck" />
-
-        <TextView
-            android:id="@+id/cocktailName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:orientation="horizontal"
             android:layout_marginStart="40dp"
-            android:layout_marginTop="15dp"
-            android:paddingEnd="60dp"
-            android:text="@string/cocktailName"
-            android:textSize="23sp"
-            android:textStyle="bold"
+            android:layout_marginTop="20dp"
             app:layout_constraintBottom_toTopOf="@+id/cocktailType"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="RtlSymmetry" />
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/cocktailName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingEnd="60dp"
+                android:text="@string/cocktailName"
+                android:textSize="23sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/cocktailType"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="RtlSymmetry" />
+
+            <TextView
+                android:id="@+id/textViewPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ksh"
+                android:textColor="@color/yellow"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@id/cocktailPrice"
+                app:layout_constraintStart_toEndOf="@id/cocktailName"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/cocktailPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="10dp"
+                android:text="@string/money"
+                android:textColor="@color/yellow"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/textViewPrice"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="RtlSymmetry,TextContrastCheck" />
+
+
+        </LinearLayout>
+
 
         <TextView
             android:id="@+id/cocktailType"
@@ -82,7 +93,7 @@
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/cocktailDescription"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/cocktailName"
+            app:layout_constraintTop_toBottomOf="@id/cocktailLinear"
             tools:ignore="RtlSymmetry" />
 
         <TextView
