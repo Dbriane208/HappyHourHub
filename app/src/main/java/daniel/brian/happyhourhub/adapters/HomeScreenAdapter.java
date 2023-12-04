@@ -21,8 +21,6 @@ public class HomeScreenAdapter extends RecyclerView.Adapter<HomeScreenAdapter.Ho
     private ArrayList productName,productPrice,productDescription,productType,add_image_button;
     private Context context;
 
-
-
     @NonNull
     @Override
     public HomeScreenViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
