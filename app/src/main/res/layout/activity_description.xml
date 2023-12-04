@@ -5,7 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/yellow"
+    android:background="@color/g_blue"
     tools:context=".activities.DescriptionActivity">
 
     <ImageView
@@ -24,6 +24,7 @@
         android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
         android:layout_height="444dp"
+        android:backgroundTint="@color/white_smoke"
         android:background="@drawable/background_descr"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -35,22 +36,39 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_marginStart="40dp"
-            android:layout_marginTop="20dp"
-            app:layout_constraintBottom_toTopOf="@+id/cocktailType"
+            android:layout_marginTop="50dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/cocktailNameTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingEnd="15dp"
+                android:text="@string/name"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:ignore="RtlSymmetry" />
 
             <TextView
                 android:id="@+id/cocktailName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingEnd="60dp"
+                android:paddingEnd="15dp"
                 android:text="@string/cocktailName"
-                android:textSize="23sp"
+                android:textColor="@color/yellow"
+                android:textSize="17sp"
                 android:textStyle="bold"
-                app:layout_constraintBottom_toTopOf="@+id/cocktailType"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="RtlSymmetry,TextContrastCheck" />
+
+            <TextView
+                android:id="@+id/cocktailPriceTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingEnd="15dp"
+                android:text="@string/price"
+                android:textSize="20sp"
+                android:textStyle="bold"
                 tools:ignore="RtlSymmetry" />
 
             <TextView
@@ -59,11 +77,9 @@
                 android:layout_height="wrap_content"
                 android:text="@string/ksh"
                 android:textColor="@color/yellow"
-                android:textSize="25sp"
+                android:textSize="17sp"
                 android:textStyle="bold"
-                app:layout_constraintEnd_toStartOf="@id/cocktailPrice"
-                app:layout_constraintStart_toEndOf="@id/cocktailName"
-                app:layout_constraintTop_toTopOf="parent" />
+                tools:ignore="TextContrastCheck" />
 
             <TextView
                 android:id="@+id/cocktailPrice"
@@ -72,28 +88,58 @@
                 android:paddingStart="10dp"
                 android:text="@string/money"
                 android:textColor="@color/yellow"
-                android:textSize="25sp"
+                android:textSize="17sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toEndOf="@id/textViewPrice"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:ignore="RtlSymmetry,TextContrastCheck" />
 
-
         </LinearLayout>
 
-
-        <TextView
-            android:id="@+id/cocktailType"
+        <LinearLayout
+            android:id="@+id/TypeLayout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="40dp"
             android:layout_marginTop="15dp"
-            android:text="@string/cocktailType"
-            android:textSize="23sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/cocktailDescription"
+            app:layout_constraintBottom_toTopOf="@+id/cocktailDescriptionTxt"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/cocktailLinear"
+            app:layout_constraintTop_toBottomOf="@id/cocktailLinear">
+
+            <TextView
+                android:id="@+id/cocktailTypeTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingEnd="15dp"
+                android:text="@string/type"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:ignore="RtlSymmetry" />
+
+            <TextView
+                android:id="@+id/cocktailType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cocktailType"
+                android:textColor="@color/yellow"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                tools:ignore="RtlSymmetry,TextContrastCheck" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/cocktailDescriptionTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="15dp"
+            android:paddingEnd="15dp"
+            android:text="@string/description"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/TypeLayout"
             tools:ignore="RtlSymmetry" />
 
         <TextView
@@ -102,10 +148,11 @@
             android:layout_height="wrap_content"
             android:text="@string/descriptionCocktail"
             android:textSize="17sp"
+            android:layout_marginTop="15dp"
             app:layout_constraintBottom_toTopOf="@+id/addToCartButton"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/cocktailType"
+            app:layout_constraintTop_toBottomOf="@+id/cocktailDescriptionTxt"
             tools:ignore="TextSizeCheck" />
 
         <Button
@@ -114,9 +161,8 @@
             android:layout_height="55dp"
             android:layout_marginTop="50dp"
             android:layout_marginBottom="50dp"
-            android:backgroundTint="@color/g_orange_yellow"
+            android:backgroundTint="@color/g_blue"
             android:text="@string/add_to_cart"
-            android:textColor="#546E7A"
             android:textSize="25sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
