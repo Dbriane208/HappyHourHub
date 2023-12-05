@@ -112,5 +112,6 @@
     <string name="upload_image">Upload Image</string>
     <string name="post">Post</string>
     <string name="cocktailType">Alcoholic</string>
+    <string name="area">Area :</string>
 </resources>
 
