@@ -13,9 +13,15 @@ import java.util.ArrayList;
 
 import daniel.brian.happyhourhub.databinding.CocktailLayoutBinding;
 import daniel.brian.happyhourhub.dtos.Alcoholic;
+import daniel.brian.happyhourhub.util.OnItemClickListener;
 
 public class AlcoholicCocktailAdapter extends RecyclerView.Adapter<AlcoholicCocktailAdapter.AlcoholicCocktailViewHolder> {
     private ArrayList<Alcoholic> alcoholicList = new ArrayList<>();
+    private OnItemClickListener onItemClick;
+
+    public void setOnItemClick(OnItemClickListener onItemClick) {
+        this.onItemClick = onItemClick;
+    }
 
     @SuppressLint("NotifyDataSetChanged")
     public void setAlcoholicCocktail(ArrayList<Alcoholic> alcoholicList){
@@ -40,6 +46,12 @@ public class AlcoholicCocktailAdapter extends RecyclerView.Adapter<AlcoholicCock
                 .into(holder.cocktailLayoutBinding.cocktailImage);
         Alcoholic drink = alcoholicList.get(position);
         holder.cocktailLayoutBinding.cocktailName.setText(drink.getStrDrink());
+
+        holder.itemView.setOnClickListener(view -> {
+            if(onItemClick != null){
+                onItemClick.onItemClick(alcoholicList.get(position));
+            }
+        });
     }
 
     @Override
