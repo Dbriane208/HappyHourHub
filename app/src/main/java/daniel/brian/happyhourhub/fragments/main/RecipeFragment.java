@@ -1,5 +1,6 @@
 package daniel.brian.happyhourhub.fragments.main;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -16,6 +17,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 import java.util.List;
 
+import daniel.brian.happyhourhub.activities.RecipeDescriptionActivity;
 import daniel.brian.happyhourhub.adapters.AlcoholicCocktailAdapter;
 import daniel.brian.happyhourhub.adapters.NonAlcoholicCocktailAdapter;
 import daniel.brian.happyhourhub.databinding.FragmentRecipeBinding;
@@ -30,6 +32,9 @@ import daniel.brian.happyhourhub.viewmodel.NonAlcoholicCocktailViewModel;
 import daniel.brian.happyhourhub.viewmodel.NonAlcoholicCocktailViewModelFactory;
 
 public class RecipeFragment extends Fragment {
+    private static final String MEAL_NAME = "name";
+    private static final String MEAL_ID = "id";
+    private static final String MEAL_THUMB = "image";
     FragmentRecipeBinding binding;
     AlcoholicCocktailAdapter alcoholicCocktailAdapter;
     AlcoholicCocktailViewModel alcoholicCocktailViewModel;
@@ -70,9 +75,19 @@ public class RecipeFragment extends Fragment {
         nonAlcoholicCocktailViewModel = new ViewModelProvider(this,nonAlcoholicCocktailViewModelFactory).get(NonAlcoholicCocktailViewModel.class);
         getAllNonAlcoholicCocktails();
 
-
+        onAlcoholicClick();
 
         return binding.getRoot();
+    }
+
+    private void onAlcoholicClick() {
+        alcoholicCocktailAdapter.setOnItemClick(alcoholic ->{
+            Intent intent = new Intent(this.getContext(), RecipeDescriptionActivity.class);
+            intent.putExtra(MEAL_NAME,alcoholic.getStrDrink());
+            intent.putExtra(MEAL_THUMB,alcoholic.getStrDrinkThumb());
+            intent.putExtra(MEAL_ID,alcoholic.getIdDrink());
+            startActivity(intent);
+        });
     }
 
     private void getAllNonAlcoholicCocktails() {
