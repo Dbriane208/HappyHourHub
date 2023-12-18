@@ -13,10 +13,14 @@ import java.util.ArrayList;
 
 import daniel.brian.happyhourhub.databinding.CocktailLayoutBinding;
 import daniel.brian.happyhourhub.dtos.NonAlcoholic;
+import daniel.brian.happyhourhub.util.OnAlcoholicItemClickListener;
+import daniel.brian.happyhourhub.util.OnNonAlcoholicItemClickListener;
 
 public class NonAlcoholicCocktailAdapter extends RecyclerView.Adapter<NonAlcoholicCocktailAdapter.NonAlcoholicViewHolder> {
     private ArrayList<NonAlcoholic> nonAlcoholicList = new ArrayList<>();
+    private OnNonAlcoholicItemClickListener Click;
 
+    public  void setNonAlcoholicClick(OnNonAlcoholicItemClickListener listener){this.Click = listener;}
     @SuppressLint("NotifyDataSetChanged")
     public void setNonAlcoholicCocktail(ArrayList<NonAlcoholic> nonAlcoholicList){
         this.nonAlcoholicList = nonAlcoholicList;
@@ -27,7 +31,7 @@ public class NonAlcoholicCocktailAdapter extends RecyclerView.Adapter<NonAlcohol
     @Override
     public NonAlcoholicViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         return new NonAlcoholicViewHolder(
-           CocktailLayoutBinding.inflate(LayoutInflater.from(parent.getContext()),parent,false));
+                CocktailLayoutBinding.inflate(LayoutInflater.from(parent.getContext()), parent, false));
     }
 
     @Override
@@ -37,6 +41,12 @@ public class NonAlcoholicCocktailAdapter extends RecyclerView.Adapter<NonAlcohol
                 .into(holder.cocktailLayoutBinding.cocktailImage);
         NonAlcoholic drink = nonAlcoholicList.get(position);
         holder.cocktailLayoutBinding.cocktailName.setText(drink.getStrDrink());
+
+        holder.itemView.setOnClickListener(view -> {
+            if(Click != null){
+                Click.onClick(nonAlcoholicList.get(position));
+            }
+        });
     }
 
     @Override
@@ -44,7 +54,7 @@ public class NonAlcoholicCocktailAdapter extends RecyclerView.Adapter<NonAlcohol
         return nonAlcoholicList.size();
     }
 
-    public class NonAlcoholicViewHolder extends RecyclerView.ViewHolder {
+    public static class NonAlcoholicViewHolder extends RecyclerView.ViewHolder {
         private final CocktailLayoutBinding cocktailLayoutBinding;
         public NonAlcoholicViewHolder(@NonNull CocktailLayoutBinding cocktailLayoutBinding) {
             super(cocktailLayoutBinding.getRoot());

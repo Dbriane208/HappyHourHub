@@ -113,5 +113,8 @@
     <string name="post">Post</string>
     <string name="cocktailType">Alcoholic</string>
     <string name="area">Area :</string>
+    <string name="inst">-Instructions :</string>
+    <string name="ingredient">-Ingredients :</string>
+    <string name="measurements">-Measurements :</string>
 </resources>
 

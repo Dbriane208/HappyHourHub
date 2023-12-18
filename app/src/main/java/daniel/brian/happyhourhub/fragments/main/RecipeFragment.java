@@ -76,8 +76,19 @@ public class RecipeFragment extends Fragment {
         getAllNonAlcoholicCocktails();
 
         onAlcoholicClick();
+        onNonAlcoholicClick();
 
         return binding.getRoot();
+    }
+
+    private void onNonAlcoholicClick() {
+        nonAlcoholicCocktailAdapter.setNonAlcoholicClick(nonalcoholic ->{
+            Intent intent = new Intent(this.getContext(), RecipeDescriptionActivity.class);
+            intent.putExtra(MEAL_NAME,nonalcoholic.getStrDrink());
+            intent.putExtra(MEAL_THUMB,nonalcoholic.getStrDrinkThumb());
+            intent.putExtra(MEAL_ID,nonalcoholic.getIdDrink());
+            startActivity(intent);
+        });
     }
 
     private void onAlcoholicClick() {
@@ -96,7 +107,7 @@ public class RecipeFragment extends Fragment {
                 binding.progressBar1.setVisibility(View.VISIBLE);
             } else if (nonalcoholic instanceof Result.Success<List<NonAlcoholic>>) {
                 binding.progressBar1.setVisibility(View.INVISIBLE);
-                List<NonAlcoholic> nonAlcoholicList = ((Result.Success<List<NonAlcoholic>>)nonalcoholic).getData();
+                List<NonAlcoholic> nonAlcoholicList = nonalcoholic.getData();
                 nonAlcoholicCocktailAdapter.setNonAlcoholicCocktail((ArrayList<NonAlcoholic>) nonAlcoholicList);
             } else if (nonalcoholic instanceof Result.Error<List<NonAlcoholic>>) {
                 Log.d("Recipe Fragment","Non Alcoholic Error");
@@ -110,7 +121,7 @@ public class RecipeFragment extends Fragment {
                 binding.progressBar.setVisibility(View.VISIBLE);
             }else if(listResult instanceof Result.Success<List<Alcoholic>>){
                 binding.progressBar.setVisibility(View.INVISIBLE);
-                List<Alcoholic> alcoholicList = ((Result.Success<List<Alcoholic>>)listResult).getData();
+                List<Alcoholic> alcoholicList = listResult.getData();
                 alcoholicCocktailAdapter.setAlcoholicCocktail((ArrayList<Alcoholic>) alcoholicList);
             } else if (listResult instanceof Result.Error<List<Alcoholic>>) {
                 Log.d("Recipe Fragment","Alcoholic Error");

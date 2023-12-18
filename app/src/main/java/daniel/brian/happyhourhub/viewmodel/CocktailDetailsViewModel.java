@@ -16,7 +16,7 @@ public class CocktailDetailsViewModel extends ViewModel {
         this.getCocktailDetailsRepository = getCocktailDetailsRepository;
     }
 
-    public LiveData<Result<List<Cocktails>>> getCocktailsDetails(){
-        return getCocktailDetailsRepository.getCocktailDetails();
+    public LiveData<Result<List<Cocktails>>> getCocktailsDetails(String id){
+        return getCocktailDetailsRepository.getCocktailDetails(id);
     }
 }
