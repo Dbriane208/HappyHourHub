@@ -13,13 +13,13 @@ import java.util.ArrayList;
 
 import daniel.brian.happyhourhub.databinding.CocktailLayoutBinding;
 import daniel.brian.happyhourhub.dtos.Alcoholic;
-import daniel.brian.happyhourhub.util.OnItemClickListener;
+import daniel.brian.happyhourhub.util.OnAlcoholicItemClickListener;
 
 public class AlcoholicCocktailAdapter extends RecyclerView.Adapter<AlcoholicCocktailAdapter.AlcoholicCocktailViewHolder> {
     private ArrayList<Alcoholic> alcoholicList = new ArrayList<>();
-    private OnItemClickListener onItemClick;
+    private OnAlcoholicItemClickListener onItemClick;
 
-    public void setOnItemClick(OnItemClickListener onItemClick) {
+    public void setOnItemClick(OnAlcoholicItemClickListener onItemClick) {
         this.onItemClick = onItemClick;
     }
 
@@ -65,5 +65,5 @@ public class AlcoholicCocktailAdapter extends RecyclerView.Adapter<AlcoholicCock
             super(cocktailLayoutBinding.getRoot());
             this.cocktailLayoutBinding = cocktailLayoutBinding;
         }
-    };
+    }
 }

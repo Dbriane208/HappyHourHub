@@ -18,6 +18,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fitsSystemWindows="true"
+        app:collapsedTitleTextColor="@color/white"
+        app:expandedTitleTextColor="@color/white"
         app:contentScrim="@color/g_blue"
         app:layout_scrollFlags="scroll|snap|exitUntilCollapsed">
 
@@ -53,40 +55,20 @@
         android:layout_marginTop="5dp"
         android:layout_marginBottom="45dp">
 
-      <LinearLayout
-          android:id="@+id/cocktailInformation"
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:orientation="horizontal"
-          app:layout_constraintStart_toStartOf="parent"
-          app:layout_constraintTop_toTopOf="parent">
-
-        <TextView
-            android:id="@+id/cocktailType"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginStart="15dp"
-            android:text="@string/type"
-            android:textColor="@color/g_black"
-            android:textSize="14sp"
-            android:visibility="invisible" />
-
-      </LinearLayout>
-
       <TextView
           android:id="@+id/cocktailInstructions"
           android:layout_width="match_parent"
           android:layout_height="match_parent"
-          android:layout_marginStart="15dp"
+          android:layout_marginStart="20dp"
           android:layout_marginTop="10dp"
           android:includeFontPadding="false"
+          android:text="@string/inst"
           android:textColor="@color/black"
-          android:textSize="18sp"
+          android:textSize="20sp"
           android:textStyle="bold"
           app:layout_constraintEnd_toEndOf="parent"
           app:layout_constraintStart_toStartOf="parent"
-          app:layout_constraintTop_toBottomOf="@id/cocktailInformation" />
+          />
 
       <TextView
           android:id="@+id/cocktailContent"
@@ -94,9 +76,129 @@
           android:layout_height="match_parent"
           android:layout_marginStart="20dp"
           android:textColor="@color/black"
+          android:layout_marginTop="10dp"
           app:layout_constraintEnd_toEndOf="parent"
           app:layout_constraintStart_toStartOf="parent"
           app:layout_constraintTop_toBottomOf="@id/cocktailInstructions" />
+
+      <TextView
+          android:id="@+id/cocktailIngredient"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_marginStart="20dp"
+          android:textColor="@color/black"
+          android:layout_marginTop="10dp"
+          android:text="@string/ingredient"
+          android:textStyle="bold"
+          android:textSize="20sp"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@id/cocktailContent" />
+
+      <TextView
+          android:id="@+id/cocktailIngredient1"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_marginStart="20dp"
+          android:textColor="@color/black"
+          android:layout_marginTop="10dp"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@id/cocktailIngredient" />
+
+      <TextView
+          android:id="@+id/cocktailIngredient2"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_marginStart="20dp"
+          android:textColor="@color/black"
+          android:layout_marginTop="10dp"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@id/cocktailIngredient1" />
+
+      <TextView
+          android:id="@+id/cocktailIngredient3"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_marginStart="20dp"
+          android:textColor="@color/black"
+          android:layout_marginTop="10dp"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@id/cocktailIngredient2" />
+
+      <TextView
+          android:id="@+id/cocktailIngredient4"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_marginStart="20dp"
+          android:textColor="@color/black"
+          android:layout_marginTop="10dp"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@id/cocktailIngredient3" />
+
+      <TextView
+          android:id="@+id/cocktailMeasurements"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_marginStart="20dp"
+          android:textColor="@color/black"
+          android:layout_marginTop="10dp"
+          android:text="@string/measurements"
+          android:textSize="20sp"
+          android:textStyle="bold"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@id/cocktailIngredient4" />
+
+      <TextView
+          android:id="@+id/cocktailMeasure1"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_marginStart="20dp"
+          android:textColor="@color/black"
+          android:layout_marginTop="10dp"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@id/cocktailMeasurements" />
+
+      <TextView
+          android:id="@+id/cocktailMeasure2"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_marginStart="20dp"
+          android:textColor="@color/black"
+          android:layout_marginTop="10dp"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@id/cocktailMeasure1" />
+
+      <TextView
+          android:id="@+id/cocktailMeasure3"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_marginStart="20dp"
+          android:textColor="@color/black"
+          android:layout_marginTop="10dp"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@id/cocktailMeasure2" />
+
+      <ProgressBar
+          android:id="@+id/progressBar"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:indeterminateTint="@color/g_blue"
+          android:visibility="visible"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintHorizontal_bias="0.517"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent"
+          app:layout_constraintVertical_bias="0.102" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -18,9 +18,9 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class GetCocktailDetailsRepository {
-    public LiveData<Result<List<Cocktails>>> getCocktailDetails(){
+    public LiveData<Result<List<Cocktails>>> getCocktailDetails(String id){
         MutableLiveData<Result<List<Cocktails>>> cocktailsDetailsLiveData = new MutableLiveData<>();
-        RetrofitInstance.drinkApiInstance().getCocktails("details").enqueue(new Callback<>() {
+        RetrofitInstance.drinkApiInstance().getCocktails(id).enqueue(new Callback<>() {
             @Override
             public void onResponse(@NonNull Call<CocktailsList> call, @NonNull Response<CocktailsList> response) {
                 List<Cocktails> cocktails = response.body() != null ? response.body().getDrinks() : null;
