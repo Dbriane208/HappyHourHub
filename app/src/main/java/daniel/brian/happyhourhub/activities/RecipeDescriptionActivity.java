@@ -1,16 +1,14 @@
 package daniel.brian.happyhourhub.activities;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.lifecycle.ViewModelProvider;
-
 import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.ViewModelProvider;
+
 import com.bumptech.glide.Glide;
 
-import daniel.brian.happyhourhub.adapters.AlcoholicCocktailAdapter;
 import daniel.brian.happyhourhub.databinding.ActivityRecipeDescriptionBinding;
-import daniel.brian.happyhourhub.fragments.main.RecipeFragment;
 import daniel.brian.happyhourhub.repository.GetCocktailDetailsRepository;
 import daniel.brian.happyhourhub.viewmodel.CocktailDetailsViewModel;
 import daniel.brian.happyhourhub.viewmodel.CocktailDetailsViewModelFactory;
@@ -44,7 +42,7 @@ public class RecipeDescriptionActivity extends AppCompatActivity {
         Glide.with(getApplicationContext())
                 .load(cocktailImage)
                 .into(recipeDescriptionBinding.cocktailImage);
-        recipeDescriptionBinding.cocktailInstructions.setText(cocktailName);
+        recipeDescriptionBinding.collapsingBar.setTitle(cocktailName);
     }
 
     private void getInformationViews() {

@@ -7,6 +7,7 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 
 import java.util.List;
+import java.util.Objects;
 
 import daniel.brian.happyhourhub.dtos.Alcoholic;
 import daniel.brian.happyhourhub.dtos.AlcoholicList;
@@ -30,7 +31,7 @@ public class GetAlcoholicCocktailRepository {
 
             @Override
             public void onFailure(@NonNull Call<AlcoholicList> call, @NonNull Throwable t) {
-                Log.d("GetAlcoholicRepository", t.getMessage());
+                Log.d("GetAlcoholicRepository", Objects.requireNonNull(t.getMessage()));
             }
         });
 
