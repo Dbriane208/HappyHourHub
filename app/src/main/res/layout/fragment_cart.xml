@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/Cart"
-        android:textColor="@color/yellow"
+        android:textColor="@color/g_blue"
         android:textSize="50sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@id/guidelineView"
@@ -57,12 +57,13 @@
         app:layout_constraintTop_toBottomOf="@+id/view"/>
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerCart"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
-        app:layout_constraintEnd_toEndOf="@id/amount"
-        app:layout_constraintStart_toStartOf="@id/total"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/guidelineItems"
         app:layout_constraintBottom_toTopOf="@id/amount"/>
 
@@ -93,7 +94,7 @@
         android:layout_width="340dp"
         android:layout_height="55dp"
         android:layout_marginBottom="40dp"
-        android:backgroundTint="@color/yellow"
+        android:backgroundTint="@color/g_blue"
         android:padding="14dp"
         android:text="@string/order"
         android:textStyle="bold"

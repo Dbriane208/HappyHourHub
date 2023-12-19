@@ -17,9 +17,7 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
-import java.util.Objects;
 
 import daniel.brian.happyhourhub.R;
 import daniel.brian.happyhourhub.adapters.HomeScreenAdapter;
@@ -49,7 +47,7 @@ public class HomeFragment extends Fragment {
         productPrice = new ArrayList<>();
         productDescription = new ArrayList<>();
         productType = new ArrayList<>();
-        Add_image_button = new ArrayList<byte[]>();
+        Add_image_button = new ArrayList<>();
 
         recyclerView = fragmentHomeBinding.availableCocktails;
         homeScreenAdapter = new HomeScreenAdapter(this.getContext(), productName, productPrice, productDescription, productType, Add_image_button);
@@ -92,10 +90,11 @@ public class HomeFragment extends Fragment {
         viewFlipper.startFlipping();
     }
 
+    @SuppressLint("NotifyDataSetChanged")
     private void displayData() {
         Cursor cursor = adminDB.getAlcoholicCocktails();
         if (cursor.getCount() == 0) {
-            Toast.makeText(requireActivity(), "No Entry Exists", Toast.LENGTH_LONG).show();
+            Toast.makeText(requireActivity(), "No Items Available", Toast.LENGTH_LONG).show();
         } else {
             productName.clear();
             productPrice.clear();
