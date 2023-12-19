@@ -46,7 +46,6 @@ public class AdminDB extends SQLiteOpenHelper {
     //getting the alcoholic drinks
     public Cursor getAlcoholicCocktails(){
         SQLiteDatabase db = this.getWritableDatabase();
-        Cursor cursor = db.rawQuery("select * from Products ",null);
-        return cursor;
+        return db.rawQuery("select * from Products ",null);
     }
 }
