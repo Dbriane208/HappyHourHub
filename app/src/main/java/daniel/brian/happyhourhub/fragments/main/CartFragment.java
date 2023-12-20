@@ -17,9 +17,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
 import daniel.brian.happyhourhub.adapters.CartAdapter;
-import daniel.brian.happyhourhub.adapters.HomeScreenAdapter;
 import daniel.brian.happyhourhub.databinding.FragmentCartBinding;
-import daniel.brian.happyhourhub.db.AdminDB;
 import daniel.brian.happyhourhub.db.CartDB;
 
 public class CartFragment extends Fragment {
@@ -28,8 +26,6 @@ public class CartFragment extends Fragment {
     CartAdapter cartAdapter;
     ArrayList<String> productName, productPrice;
     ArrayList<byte[]> productImage;
-
-
     CartDB cartDB;
     @Nullable
     @Override
@@ -46,6 +42,10 @@ public class CartFragment extends Fragment {
         recyclerView.setAdapter(cartAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this.getContext()));
         displayCartItems();
+
+        //updating the no of items in the cart
+        int items = cartDB.getItemsInCart();
+        fragmentCartBinding.items.setText(String.valueOf(items));
 
         return fragmentCartBinding.getRoot();
     }

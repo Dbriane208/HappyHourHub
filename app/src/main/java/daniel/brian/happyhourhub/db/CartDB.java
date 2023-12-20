@@ -38,4 +38,29 @@ public class CartDB extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
         return db.rawQuery("select * from cartProducts ",null);
     }
+
+    public int getItemsInCart() {
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery("SELECT count(*) FROM cartProducts", null);
+        // this will store the counts of items in the cart
+        int count = 0;
+        if (cursor != null) {
+            // handling potential excepts
+            try {
+                // this line moves the cursor to the first row of the result set.
+                // if there is at least one low, it returns true
+                if (cursor.moveToFirst()) {
+                    // this retrieves the count value from the first column of the result set
+                    count = cursor.getInt(0);
+                }
+            } finally {
+                // closes the cursor regardless of whether the exceptions occured or not
+                cursor.close();
+            }
+        }
+
+        // returns the count of the items
+        return count;
+    }
+
 }
