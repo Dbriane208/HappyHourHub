@@ -54,7 +54,7 @@ public class CartDB extends SQLiteOpenHelper {
                     count = cursor.getInt(0);
                 }
             } finally {
-                // closes the cursor regardless of whether the exceptions occured or not
+                // closes the cursor regardless of whether the exceptions occurred or not
                 cursor.close();
             }
         }
@@ -63,4 +63,21 @@ public class CartDB extends SQLiteOpenHelper {
         return count;
     }
 
+    public int getTotalCost(){
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery("select sum(price) from cartProducts",null);
+
+        int cost = 0;
+        if(cursor != null){
+            try{
+                if(cursor.moveToFirst()){
+                    cost = cursor.getInt(0);
+                }
+            }
+            finally {
+               cursor.close();
+            }
+        }
+        return cost;
+    }
 }
