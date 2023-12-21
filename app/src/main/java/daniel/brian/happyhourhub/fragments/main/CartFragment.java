@@ -27,6 +27,7 @@ public class CartFragment extends Fragment {
     ArrayList<String> productName, productPrice;
     ArrayList<byte[]> productImage;
     CartDB cartDB;
+    @SuppressLint("SetTextI18n")
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -46,6 +47,10 @@ public class CartFragment extends Fragment {
         //updating the no of items in the cart
         int items = cartDB.getItemsInCart();
         fragmentCartBinding.items.setText(String.valueOf(items));
+
+        // updating the cost of items int the cart
+        int cost = cartDB.getTotalCost();
+        fragmentCartBinding.amount.setText("Ksh " + cost);
 
         return fragmentCartBinding.getRoot();
     }

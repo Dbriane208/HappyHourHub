@@ -36,7 +36,6 @@ public class LoginDB extends SQLiteOpenHelper {
         return result != -1;
     }
 
-
     public boolean checkUser(String phoneNumber, String email){
         SQLiteDatabase db = this.getWritableDatabase();
         @SuppressLint("Recycle")
