@@ -16,9 +16,16 @@ HappyHourHub is your go-to resource for discovering, crafting, and enjoying a wi
 - Ready to make your favorite drink? HappyHour Hub offers secure payment options for purchasing ingredients. Your payment information is kept safe.
 
 # Tech Stack
-- <b>Java:</b> The language that makes HappyHour Hub work.
-- <b>MVVM Architecture:</b> Keeps the code organized and simple.
-- <b>Retrofit:</b> Helps the app talk to the internet.
-- <b>Glide:</b> Takes care of showing pictures smoothly.
-- <b>SQLite:</b> Stores user and recipe info.
-- <b>XML:</b> Describes how the app looks.
+
+- <b>[Java](https://www.w3schools.com/java/java_intro.asp):</b> The language that makes HappyHour Hub work.
+- <b>[MVVM Architecture](https://developer.android.com/topic/architecture)</b>: The app is designed using the Model-View-ViewModel architectural pattern for better separation of concerns and maintainability.
+- <b>[Retrofit](https://square.github.io/retrofit/)</b>: Used for making network requests to fetch data from the CocktailDB APIs.
+- <b>[LiveData](https://developer.android.com/topic/libraries/architecture/livedata)</b>: Used for observing changes in data and updating the UI accordingly.
+- <b>[SQLite](https://developer.android.com/training/data-storage/sqlite):</b> Stores user and recipe info.
+
+## Setup Instructions
+
+- Clone the repository to your local machine.
+- Open the project in Android Studio.
+- Build and run the app on your preferred Android emulator or physical device.
+- Explore the app and enjoy browsing meals and cocktails!
