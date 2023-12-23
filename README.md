@@ -29,3 +29,29 @@ HappyHourHub is your go-to resource for discovering, crafting, and enjoying a wi
 - Open the project in Android Studio.
 - Build and run the app on your preferred Android emulator or physical device.
 - Explore the app and enjoy browsing meals and cocktails!
+
+  ## Dependancies
+  
+       //Android Navigation
+      implementation 'androidx.navigation:navigation-fragment-ktx:2.7.5'
+      implementation "androidx.navigation:navigation-ui-ktx:2.7.5"
+
+      //retrofit and gson converter
+      implementation "com.squareup.retrofit2:retrofit:2.9.0"
+      implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
+
+      // ViewModel
+      implementation "androidx.lifecycle:lifecycle-viewmodel:$lifecycle_version"
+  
+      // LiveData
+      implementation "androidx.lifecycle:lifecycle-livedata:$lifecycle_version"
+  
+       //Glide
+      implementation 'com.github.bumptech.glide:glide:4.13.0'
+
+## API Usage
+
+- <b>CocktailDB API</b>: The app fetches cocktail data using the CocktailDB API. For more information, visit [CocktailDB API](https://thecocktaildb.com/api.php).
+
+## Contributing
+If you would like to contribute to this project, feel free to fork the repository, make your changes, and create a pull request. Your contributions is much appreciated!
