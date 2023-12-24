@@ -80,4 +80,5 @@ public class CartDB extends SQLiteOpenHelper {
         }
         return cost;
     }
+
 }
