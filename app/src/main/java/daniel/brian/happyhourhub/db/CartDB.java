@@ -10,12 +10,12 @@ import androidx.annotation.Nullable;
 
 public class CartDB extends SQLiteOpenHelper {
     public CartDB(@Nullable Context context) {
-        super(context, "cartProducts.db", null, 1);
+        super(context, "cartProducts.db", null, 2);
     }
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("Create Table cartProducts(name Text not null,price Text not null,type Text not null, image blob not null)");
+        db.execSQL("Create Table cartProducts(name Text not null,price Text not null, image blob not null)");
     }
 
     @Override
@@ -80,5 +80,4 @@ public class CartDB extends SQLiteOpenHelper {
         }
         return cost;
     }
-
 }

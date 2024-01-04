@@ -51,7 +51,7 @@ public class DescriptionActivity extends AppCompatActivity {
         }
 
         descriptionBinding.addToCartButton.setOnClickListener(view -> {
-            if (adapterPosition != -1 && imageData != null && productName != null && productPrice != null && productType != null && productDescription != null) {
+            if (adapterPosition != -1 && imageData != null && productName != null && productPrice != null) {
                 String name = productName.get(adapterPosition);
                 String price = productPrice.get(adapterPosition);
             boolean insert = cartDB.insertCocktailData(name, price, imageData);
