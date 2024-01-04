@@ -37,7 +37,7 @@
                 android:id="@+id/cocktail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="30dp"
                 android:text="@string/cocktail"
                 android:textSize="20sp"
                 android:textStyle="bold"
@@ -59,55 +59,6 @@
                 app:layout_constraintStart_toStartOf="@id/guidelineStart"
                 app:layout_constraintTop_toBottomOf="@id/cocktail"
                 tools:ignore="TextContrastCheck" />
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"
-                android:orientation="horizontal"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="@id/guidelineStart"
-                app:layout_constraintEnd_toEndOf="@id/guidelineEnd">
-
-                <ImageButton
-                    android:id="@+id/addItem"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:layout_marginEnd="8dp"
-                    android:background="@color/g_blue"
-                    android:importantForAccessibility="no"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/itemCount"
-                    app:srcCompat="@drawable/add_item"
-                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck,ImageContrastCheck" />
-
-                <TextView
-                    android:id="@+id/itemCount"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="12dp"
-                    android:text="@string/itemCount"
-                    android:textColor="@color/black"
-                    android:textSize="15sp"
-                    android:textStyle="bold"
-                    app:layout_constraintBottom_toBottomOf="@+id/addItem"
-                    app:layout_constraintEnd_toStartOf="@+id/subtractItem"
-                    app:layout_constraintTop_toTopOf="@+id/addItem" />
-
-                <ImageButton
-                    android:id="@+id/subtractItem"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:layout_marginEnd="16dp"
-                    android:background="@color/g_blue"
-                    android:contentDescription="TODO"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:srcCompat="@drawable/subtract_item"
-                    tools:ignore="ContentDescription,HardcodedText,SpeakableTextPresentCheck,TouchTargetSizeCheck,ImageContrastCheck" />
-
-            </LinearLayout>
 
             <ImageView
                 android:id="@+id/deleteItem"

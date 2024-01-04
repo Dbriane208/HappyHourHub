@@ -68,7 +68,7 @@ public class CartFragment extends Fragment {
           while(cursor.moveToNext()){
               productName.add(cursor.getString(0));
               productPrice.add(cursor.getString(1));
-              productImage.add(cursor.getBlob(3));
+              productImage.add(cursor.getBlob(2));
           }
 
           cartAdapter.notifyDataSetChanged();
