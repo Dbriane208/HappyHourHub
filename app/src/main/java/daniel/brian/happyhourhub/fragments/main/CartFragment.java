@@ -1,6 +1,7 @@
 package daniel.brian.happyhourhub.fragments.main;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -16,6 +17,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
+import daniel.brian.happyhourhub.activities.PaymentActivity;
 import daniel.brian.happyhourhub.adapters.CartAdapter;
 import daniel.brian.happyhourhub.databinding.FragmentCartBinding;
 import daniel.brian.happyhourhub.db.CartDB;
@@ -42,6 +44,11 @@ public class CartFragment extends Fragment {
         cartAdapter = new CartAdapter(this.getContext(),productName,productPrice,productImage);
         recyclerView.setAdapter(cartAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this.getContext()));
+        // to be worked on..
+        cartAdapter.setOnItemClickListener(position -> {
+            cartDB.deleteItemFromCart(productName.get(position),productPrice.get(position));
+            cartAdapter.notifyItemRemoved(position);
+        });
         displayCartItems();
 
         //updating the no of items in the cart
@@ -51,6 +58,12 @@ public class CartFragment extends Fragment {
         // updating the cost of items int the cart
         int cost = cartDB.getTotalCost();
         fragmentCartBinding.amount.setText("Ksh " + cost);
+
+        fragmentCartBinding.orderButton.setOnClickListener(view -> {
+            Intent intent = new Intent(this.getContext(), PaymentActivity.class);
+            intent.putExtra("cocktailBill",cost);
+            startActivity(intent);
+        });
 
         return fragmentCartBinding.getRoot();
     }
@@ -70,7 +83,7 @@ public class CartFragment extends Fragment {
               productPrice.add(cursor.getString(1));
               productImage.add(cursor.getBlob(2));
           }
-
+          
           cartAdapter.notifyDataSetChanged();
       }
     }

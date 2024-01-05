@@ -20,11 +20,25 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.CartViewHolder
     private ArrayList productPrice;
     private ArrayList productImage;
     private Context context;
+
+    private OnItemClickListener listener;
+
+    // we create an interface
+    public interface OnItemClickListener{
+        void onItemClick(int position);
+    }
+
+    // we create a method
+    public void setOnItemClickListener(OnItemClickListener clickListener){
+        listener = clickListener;
+    }
+
     @NonNull
     @Override
     public CartAdapter.CartViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         return new CartViewHolder(
               CartLayoutBinding.inflate(LayoutInflater.from(parent.getContext()),parent,false)
+              ,listener
         );
     }
 
@@ -45,8 +59,8 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.CartViewHolder
              holder.cartLayoutBinding.imageCart.setImageResource(R.drawable.cocktailone);
          }
 
-        holder.cartLayoutBinding.cocktail.setText(String.valueOf(productName.get(position)));
-        holder.cartLayoutBinding.cocktailPrice.setText(String.valueOf(productPrice.get(position)));
+        holder.cartLayoutBinding.cocktail.setText(String.valueOf("Name : " + productName.get(position)));
+        holder.cartLayoutBinding.cocktailPrice.setText(String.valueOf("Price : " + productPrice.get(position)));
     }
 
     @Override
@@ -56,9 +70,13 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.CartViewHolder
 
     public static class CartViewHolder extends RecyclerView.ViewHolder{
         private final CartLayoutBinding cartLayoutBinding;
-        public CartViewHolder(CartLayoutBinding cartLayoutBinding) {
+        public CartViewHolder(CartLayoutBinding cartLayoutBinding, OnItemClickListener listener) {
             super(cartLayoutBinding.getRoot());
             this.cartLayoutBinding = cartLayoutBinding;
+
+            cartLayoutBinding.deleteItem.setOnClickListener(view -> {
+                listener.onItemClick(getAdapterPosition());
+            });
         }
     }
 }

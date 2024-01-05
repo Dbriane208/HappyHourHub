@@ -1,5 +1,6 @@
 package daniel.brian.happyhourhub.activities;
 
+import android.content.Intent;
         import android.os.Bundle;
 
         import androidx.annotation.Nullable;
@@ -19,7 +20,8 @@ package daniel.brian.happyhourhub.activities;
         import com.android.volley.VolleyError;
         import com.android.volley.toolbox.StringRequest;
         import com.android.volley.toolbox.Volley;
-        import com.stripe.android.PaymentConfiguration;
+import com.google.android.material.snackbar.Snackbar;
+import com.stripe.android.PaymentConfiguration;
         import com.stripe.android.paymentsheet.PaymentSheet;
         import com.stripe.android.paymentsheet.PaymentSheetResult;
 
@@ -28,8 +30,9 @@ package daniel.brian.happyhourhub.activities;
 
         import java.util.HashMap;
         import java.util.Map;
+import java.util.Objects;
 
-        import daniel.brian.happyhourhub.R;
+import daniel.brian.happyhourhub.R;
 
 
 public class PaymentActivity extends AppCompatActivity {
@@ -46,6 +49,8 @@ public class PaymentActivity extends AppCompatActivity {
     String EphericalKey;
     String ClientSecret;
 
+    String bill;
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_payment);
@@ -60,9 +65,11 @@ public class PaymentActivity extends AppCompatActivity {
             }
         });
 
+        // receiving the actual amount
+        Intent intent = getIntent();
+        bill = String.valueOf(intent.getIntExtra("cocktailBill",-1));
 
         paymentBtn = findViewById(R.id.pay_btn);
-
 
         PaymentConfiguration.init(this, PUBLISH_KEY);
 
@@ -210,7 +217,7 @@ public class PaymentActivity extends AppCompatActivity {
             protected Map<String, String> getParams() throws AuthFailureError {
                 Map<String, String> params = new HashMap<>();
                 params.put("customer", customerID);
-                params.put("amount", "50" + "00");
+                params.put("amount", bill);
                 params.put("currency", "usd");
                 return params;
             }
