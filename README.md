@@ -49,6 +49,11 @@ HappyHourHub is your go-to resource for discovering, crafting, and enjoying a wi
        //Glide
       implementation 'com.github.bumptech.glide:glide:4.13.0'
 
+       //stripe and volley
+       implementation ("com.stripe:stripe-java:24.3.0")
+       implementation ("com.stripe:stripe-android:17.2.0")
+       implementation ("com.android.volley:volley:1.2.1")
+
 ## API Usage
 
 - <b>CocktailDB API</b>: The app fetches cocktail data using the CocktailDB API. For more information, visit [CocktailDB API](https://thecocktaildb.com/api.php).
