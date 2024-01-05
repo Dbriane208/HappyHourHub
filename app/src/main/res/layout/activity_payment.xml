@@ -18,12 +18,22 @@ tools:context=".activities.PaymentActivity">
     app:layout_constraintTop_toTopOf="parent"
     app:title="Payment Detailed"/>
 
-<Button
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Wait for the three pop-ups before clicking pay to set up the payment environment!!."
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="200dp"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        tools:ignore="HardcodedText" />
+
+    <Button
     android:id="@+id/pay_btn"
-    android:layout_width="400dp"
+    android:layout_width="300dp"
     android:layout_height="89dp"
-    android:layout_marginTop="150dp"
-    android:text="Pay"
+    android:text="@string/pay"
+    android:layout_gravity="center"
     android:textColor="@android:color/white"
     android:textStyle="bold"
     app:layout_constraintTop_toTopOf="parent"

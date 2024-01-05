@@ -80,4 +80,10 @@ public class CartDB extends SQLiteOpenHelper {
         }
         return cost;
     }
+
+    public void deleteItemFromCart(String name,String price){
+        SQLiteDatabase db  = this.getWritableDatabase();
+        db.delete("cartProducts","name = ? and price = ? ",new String[]{name,price});
+    }
 }
+
