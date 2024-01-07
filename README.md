@@ -30,6 +30,10 @@ HappyHourHub is your go-to resource for discovering, crafting, and enjoying a wi
 - Build and run the app on your preferred Android emulator or physical device.
 - Explore the app and enjoy browsing meals and cocktails!
 
+# Project Images
+## Authentication
+
+
   ## Dependancies
   
        //Android Navigation
@@ -48,6 +52,9 @@ HappyHourHub is your go-to resource for discovering, crafting, and enjoying a wi
   
        //Glide
       implementation 'com.github.bumptech.glide:glide:4.13.0'
+
+        //loading button
+       implementation 'br.com.simplepass:loading-button-android:2.2.0'
 
        //stripe and volley
        implementation ("com.stripe:stripe-java:24.3.0")
