@@ -32,7 +32,29 @@ HappyHourHub is your go-to resource for discovering, crafting, and enjoying a wi
 
 # Project Images
 ## Authentication
+<div style="display:flex;">
+    <img src="https://github.com/Dbriane208/HappyHourHub/raw/main/images/auth_start.png" alt="auth_start" width="200"/>
+    <img src="https://github.com/Dbriane208/HappyHourHub/raw/main/images/auth_reg_login.png" alt="auth_reg_login" width="200"/>
+    <img src="https://github.com/Dbriane208/HappyHourHub/raw/main/images/login.png" alt="auth_login" width="200"/>
+    <img src="https://github.com/Dbriane208/HappyHourHub/raw/main/images/register.png" alt="auth_reg" width="200">
+</div>
 
+## Home
+<div style="display:flex;">
+  <img src="https://github.com/Dbriane208/HappyHourHub/raw/main/images/home.png" alt="home" width="200"/>
+</div>
+
+## Recipe
+<div style="display:flex;">
+  <img src="https://github.com/Dbriane208/HappyHourHub/raw/main/images/categories.png" alt="categories" width="200"/>
+  <img src="https://github.com/Dbriane208/HappyHourHub/raw/main/images/item.png" alt="items" width="200"/>
+</div>
+
+## Cart
+<div style="display:flex;">
+  <img src="https://github.com/Dbriane208/HappyHourHub/raw/main/images/cart.png" alt="cart" width="200"/>
+  <img src="https://github.com/Dbriane208/HappyHourHub/raw/main/images/payments.png" alt="payment" width="200"/>
+</div>
 
   ## Dependancies
   
